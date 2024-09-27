@@ -4,6 +4,7 @@ import { IoHomeOutline, IoLogOutOutline } from "react-icons/io5";
 import { AiOutlineRobot } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { SignOutButton } from "@clerk/nextjs";
 
 function SideBar() {
   const Menu = [
@@ -14,30 +15,25 @@ function SideBar() {
       path: "/dashboard",
     },
     {
-      id: 1,
+      id: 2, 
       name: "ChatBot",
       icon: <AiOutlineRobot />,
       path: "/dashboard/chatbot",
     },
-    {
-      id: 1,
-      name: "Logout",
-      icon: <IoLogOutOutline />,
-      path: "/dashboard/logout",
-    },
   ];
+  
   const path = usePathname();
+  
   return (
     <div className="fixed h-full md:w-64 p-5 shadow-md">
       <h1>LOGO</h1>
       <hr className="my-5" />
       <ul className="flex flex-col gap-2">
-        {Menu.map((item, index) => (
-          <Link href={item.path} key={index}>
+        {Menu.map((item) => (
+          <Link href={item.path} key={item.id}>
             <li
-              key={item.id}
               className={`flex items-center space-x-2 cursor-pointer p-3 hover:bg-slate-500 hover:text-white rounded-md ${
-                item.path == path && "bg-slate-500 text-white"
+                item.path === path && "bg-slate-500 text-white"
               }`}
             >
               {item.icon}
@@ -45,6 +41,16 @@ function SideBar() {
             </li>
           </Link>
         ))}
+        
+        
+        <li className="flex items-center space-x-2 cursor-pointer p-3 hover:bg-slate-500 hover:text-white rounded-md">
+          <SignOutButton>
+            <button className="flex items-center space-x-2 w-full text-left">
+              <IoLogOutOutline />
+              <span>Logout</span>
+            </button>
+          </SignOutButton>
+        </li>
       </ul>
     </div>
   );

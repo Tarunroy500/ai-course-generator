@@ -91,14 +91,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
    yarn install
    ```
 
-## Usage
-
-To run the development server, use the following command:
-
-Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application in action.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
 
 ## License
 

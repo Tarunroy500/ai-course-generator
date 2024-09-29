@@ -1,4 +1,0 @@
-requests
-playsound
-Flask==2.0.2
-requests==2.26.0

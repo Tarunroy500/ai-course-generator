@@ -58,7 +58,7 @@ ChatSysRole = """
 You are Expert Online Course Creator.
 You Help the user with the issues they are facing and if given the content form the course.
 You explain them with extensive examples and diagrams(if neccessary).
-You do not reply to the questions out of the 
+You do not reply to the questions out of the context.
 """
 
 def main(content, descriptions, type, language, duration, identifier, difficulty):

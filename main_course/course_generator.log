@@ -1,0 +1,460 @@
+2024-09-28 17:45:49,288 - INFO - Starting course generation process...
+2024-09-28 17:45:53,941 - INFO - Vertex AI models initialized successfully.
+2024-09-28 17:45:53,941 - INFO - Generating content using CreationSysRole...
+2024-09-28 17:45:53,942 - INFO - Prompt created successfully.
+2024-09-28 17:45:53,942 - INFO - Generating course content using text model...
+2024-09-28 17:47:28,564 - INFO - Generating image for prompt: '* **Description:** A diagram illustrating the basic concept of an ensemble model. Show multiple base learners (represented as decision trees) making individual predictions. These predictions are then combined through a process like voting or averaging to produce a final ensemble prediction.
+    * **Prompt:**  "A diagram showing an ensemble model composed of three decision trees. Each tree takes input data and makes a prediction, and the three predictions are combined to generate a final ensemble output. Use clear visuals and labels to illustrate the flow of data and the concept of combining predictions."
+*'...
+2024-09-28 17:47:28,573 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,573 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram illustrating the basic concept of an ensemble model. Show multiple base learners (represented as decision trees) making individual predictions. These predictions are then combined through a process like voting or averaging to produce a final ensemble prediction.
+    * **Prompt:**  "A diagram showing an ensemble model composed of three decision trees. Each tree takes input data and makes a prediction, and the three predictions are combined to generate a final ensemble output. Use clear visuals and labels to illustrate the flow of data and the concept of combining predictions."
+*'
+2024-09-28 17:47:28,573 - INFO - Generating image for prompt: '* **Description:**  A diagram illustrating the process of bagging. Show the original dataset being resampled multiple times to create bootstrap samples. Then, depict separate models being trained on each of these samples. Finally, illustrate how the predictions from these models are combined to produce a final ensemble prediction.
+    * **Prompt:**  "A diagram visually explaining the bagging process in machine learning. The diagram should show the steps: bootstrapping the original data, training multiple models on the bootstrapped datasets, and combining their predictions for a final output."
+*'...
+2024-09-28 17:47:28,573 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,573 - ERROR - Failed to generate image for prompt: '* **Description:**  A diagram illustrating the process of bagging. Show the original dataset being resampled multiple times to create bootstrap samples. Then, depict separate models being trained on each of these samples. Finally, illustrate how the predictions from these models are combined to produce a final ensemble prediction.
+    * **Prompt:**  "A diagram visually explaining the bagging process in machine learning. The diagram should show the steps: bootstrapping the original data, training multiple models on the bootstrapped datasets, and combining their predictions for a final output."
+*'
+2024-09-28 17:47:28,573 - INFO - Generating image for prompt: '* **Description:** A diagram showing the structure of a Random Forest. Include multiple decision trees, each trained on a different bootstrapped sample and with a random subset of features considered at each split.
+    * **Prompt:** "Create a diagram representing a Random Forest model. Show multiple decision trees, each trained on different, randomly sampled subsets of the data. Highlight that each tree also randomly selects a subset of features at each split.  Indicate how the final prediction is obtained from the individual tree predictions." 
+*'...
+2024-09-28 17:47:28,573 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,573 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram showing the structure of a Random Forest. Include multiple decision trees, each trained on a different bootstrapped sample and with a random subset of features considered at each split.
+    * **Prompt:** "Create a diagram representing a Random Forest model. Show multiple decision trees, each trained on different, randomly sampled subsets of the data. Highlight that each tree also randomly selects a subset of features at each split.  Indicate how the final prediction is obtained from the individual tree predictions." 
+*'
+2024-09-28 17:47:28,573 - INFO - Generating image for prompt: '* **Description:** A diagram illustrating the sequential nature of boosting, where weak learners are added one after another, each trying to correct the errors of the previous ones.
+    * **Prompt:**  "A diagram depicting the sequential process of boosting. It should show an initial weak learner, followed by another weak learner that corrects the first learner's errors, and so on. Highlight how the focus shifts to misclassified data points in each iteration."
+*'...
+2024-09-28 17:47:28,573 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,573 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram illustrating the sequential nature of boosting, where weak learners are added one after another, each trying to correct the errors of the previous ones.
+    * **Prompt:**  "A diagram depicting the sequential process of boosting. It should show an initial weak learner, followed by another weak learner that corrects the first learner's errors, and so on. Highlight how the focus shifts to misclassified data points in each iteration."
+*'
+2024-09-28 17:47:28,573 - INFO - Generating image for prompt: '* **Description:** A flow chart illustrating the steps involved in the AdaBoost algorithm, including weight initialization, weak learner training, weight updating, and final prediction.
+    * **Prompt:** "Create a flow chart that visually explains the AdaBoost algorithm.  The chart should clearly show the steps: assigning initial weights, training a weak learner, updating weights based on misclassifications, calculating the model's weight, and finally, combining predictions from all weak learners."
+*'...
+2024-09-28 17:47:28,573 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,574 - ERROR - Failed to generate image for prompt: '* **Description:** A flow chart illustrating the steps involved in the AdaBoost algorithm, including weight initialization, weak learner training, weight updating, and final prediction.
+    * **Prompt:** "Create a flow chart that visually explains the AdaBoost algorithm.  The chart should clearly show the steps: assigning initial weights, training a weak learner, updating weights based on misclassifications, calculating the model's weight, and finally, combining predictions from all weak learners."
+*'
+2024-09-28 17:47:28,574 - INFO - Generating image for prompt: '* **Description:** A diagram illustrating the Stacking process. Show base learners making predictions that are then fed as input to a meta-learner. The meta-learner learns to combine the base learners' predictions to make a final, more accurate prediction.
+    * **Prompt:** "A diagram illustrating a stacking ensemble. Show three different base learner models (e.g., a decision tree, a support vector machine, and a k-nearest neighbors model) making predictions. These predictions are then fed as input into a meta-learner (e.g., a logistic regression model) which produces the final prediction."
+*'...
+2024-09-28 17:47:28,574 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,574 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram illustrating the Stacking process. Show base learners making predictions that are then fed as input to a meta-learner. The meta-learner learns to combine the base learners' predictions to make a final, more accurate prediction.
+    * **Prompt:** "A diagram illustrating a stacking ensemble. Show three different base learner models (e.g., a decision tree, a support vector machine, and a k-nearest neighbors model) making predictions. These predictions are then fed as input into a meta-learner (e.g., a logistic regression model) which produces the final prediction."
+*'
+2024-09-28 17:47:28,574 - INFO - Generating image for prompt: '* **Description:** A diagram illustrating how an ensemble model (like a Random Forest) can be used to generate new features for another machine learning model.
+    * **Prompt:**  "Create a diagram that shows how predictions from a Random Forest ensemble can be used as new features to train a different machine learning model (e.g., a Logistic Regression model).  The diagram should visually explain the flow of data and the concept of using ensemble predictions as additional features."
+*'...
+2024-09-28 17:47:28,574 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,574 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram illustrating how an ensemble model (like a Random Forest) can be used to generate new features for another machine learning model.
+    * **Prompt:**  "Create a diagram that shows how predictions from a Random Forest ensemble can be used as new features to train a different machine learning model (e.g., a Logistic Regression model).  The diagram should visually explain the flow of data and the concept of using ensemble predictions as additional features."
+*'
+2024-09-28 17:47:28,574 - INFO - Generating image for prompt: '* **Description:** A diagram illustrating the concept of k-fold cross-validation, showing how the data is split into folds, with one fold used for testing and the remaining folds used for training in each iteration.
+    * **Prompt:**  "Create a visual representation of 5-fold cross-validation.  The diagram should show how the dataset is divided into five parts, with each part taking turns being the test set while the other four are used for training. Highlight that this process is repeated five times, ensuring all data points are part of the test set once."
+*'...
+2024-09-28 17:47:28,574 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'parameters'
+2024-09-28 17:47:28,574 - ERROR - Failed to generate image for prompt: '* **Description:** A diagram illustrating the concept of k-fold cross-validation, showing how the data is split into folds, with one fold used for testing and the remaining folds used for training in each iteration.
+    * **Prompt:**  "Create a visual representation of 5-fold cross-validation.  The diagram should show how the dataset is divided into five parts, with each part taking turns being the test set while the other four are used for training. Highlight that this process is repeated five times, ensuring all data points are part of the test set once."
+*'
+2024-09-28 17:47:28,574 - INFO - Assembling final markdown output...
+2024-09-28 17:47:28,574 - INFO - Markdown output assembled successfully.
+2024-09-28 17:47:28,574 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 17:47:28,611 - INFO - Conversion to JSON successful.
+2024-09-28 17:47:28,612 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-28 17:51:04,150 - INFO - Starting course generation process...
+2024-09-28 17:51:08,796 - INFO - Vertex AI models initialized successfully.
+2024-09-28 17:51:08,796 - INFO - Generating content using CreationSysRole...
+2024-09-28 17:51:08,796 - INFO - Prompt created successfully.
+2024-09-28 17:51:08,796 - INFO - Generating course content using text model...
+2024-09-28 17:52:07,995 - INFO - Generating image for prompt: '**Description:** A diagram showing the basic concept of ensemble learning. It illustrates individual learners making predictions and their outputs being combined to produce a final, hopefully more accurate, prediction.
+
+**Prompt:** Create a diagram with the title "Ensemble Learning." Show three distinct shapes representing different machine learning models (e.g., a decision tree, a neural network, and a support vector machine). Each model should have an arrow pointing to a box labeled "Predictions."  These "Predictions" boxes should have arrows converging into a final box labeled "Ensemble Prediction."'...
+2024-09-28 17:52:07,995 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'image_dimensions'
+2024-09-28 17:52:07,995 - ERROR - Failed to generate image for prompt: '**Description:** A diagram showing the basic concept of ensemble learning. It illustrates individual learners making predictions and their outputs being combined to produce a final, hopefully more accurate, prediction.
+
+**Prompt:** Create a diagram with the title "Ensemble Learning." Show three distinct shapes representing different machine learning models (e.g., a decision tree, a neural network, and a support vector machine). Each model should have an arrow pointing to a box labeled "Predictions."  These "Predictions" boxes should have arrows converging into a final box labeled "Ensemble Prediction."'
+2024-09-28 17:52:07,995 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the process of bagging. It should show the original dataset being sampled multiple times to create bootstrap datasets. Each bootstrap dataset is used to train a separate model. The outputs from these models are then combined to make the final prediction.
+
+**Prompt:** Create a diagram titled "Bagging."  Show a box labeled "Original Dataset." From this box, draw arrows leading to three smaller boxes labeled "Bootstrap Sample 1," "Bootstrap Sample 2," and "Bootstrap Sample 3." Each "Bootstrap Sample" box should have an arrow pointing to a separate model (you can represent these as simple shapes). Finally, each model should have an arrow pointing to a box labeled "Combined Prediction."'...
+2024-09-28 17:52:07,995 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'image_dimensions'
+2024-09-28 17:52:07,995 - ERROR - Failed to generate image for prompt: '**Description:** A diagram illustrating the process of bagging. It should show the original dataset being sampled multiple times to create bootstrap datasets. Each bootstrap dataset is used to train a separate model. The outputs from these models are then combined to make the final prediction.
+
+**Prompt:** Create a diagram titled "Bagging."  Show a box labeled "Original Dataset." From this box, draw arrows leading to three smaller boxes labeled "Bootstrap Sample 1," "Bootstrap Sample 2," and "Bootstrap Sample 3." Each "Bootstrap Sample" box should have an arrow pointing to a separate model (you can represent these as simple shapes). Finally, each model should have an arrow pointing to a box labeled "Combined Prediction."'
+2024-09-28 17:52:07,995 - INFO - Generating image for prompt: '**Description:** A diagram showing the sequential nature of boosting. It should illustrate the training data being used to train the first model. The subsequent models are then trained on modified versions of the data, where more importance is given to instances that were misclassified by previous models.
+
+**Prompt:** Create a diagram titled "Boosting." Show four boxes representing models labeled "Model 1," "Model 2," "Model 3," and "Final Model." An arrow should lead from "Model 1" to "Model 2," then from "Model 2" to "Model 3," and finally from "Model 3" to "Final Model." 
+Above this chain of models, have a box labeled "Training Data." From this box, draw a downward arrow to "Model 1."  Between each model in the chain (e.g., between "Model 1" and "Model 2"), add a loop with an upward arrow that leads back to the previous model. Label this loop "Error Analysis & Weight Adjustment."'...
+2024-09-28 17:52:07,995 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'image_dimensions'
+2024-09-28 17:52:07,995 - ERROR - Failed to generate image for prompt: '**Description:** A diagram showing the sequential nature of boosting. It should illustrate the training data being used to train the first model. The subsequent models are then trained on modified versions of the data, where more importance is given to instances that were misclassified by previous models.
+
+**Prompt:** Create a diagram titled "Boosting." Show four boxes representing models labeled "Model 1," "Model 2," "Model 3," and "Final Model." An arrow should lead from "Model 1" to "Model 2," then from "Model 2" to "Model 3," and finally from "Model 3" to "Final Model." 
+Above this chain of models, have a box labeled "Training Data." From this box, draw a downward arrow to "Model 1."  Between each model in the chain (e.g., between "Model 1" and "Model 2"), add a loop with an upward arrow that leads back to the previous model. Label this loop "Error Analysis & Weight Adjustment."'
+2024-09-28 17:52:07,995 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the architecture of a stacked model. It should show the training data being split, with one part used to train the base learners and the other part used to train the meta-learner. The output of the base learners is then fed into the meta-learner to make the final prediction.
+
+**Prompt:** Create a diagram titled "Stacked Generalization." Show a box labeled "Training Data." This box should have two arrows coming out: one arrow leading to a box labeled "Base Learners" and another arrow leading to a box labeled "Meta-Learner." The "Base Learners" box should contain representations of three different models. Each of these models should have an arrow pointing to the "Meta-Learner" box. Finally, an arrow should come out of the "Meta-Learner" box and point to a box labeled "Final Prediction."'...
+2024-09-28 17:52:07,995 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'image_dimensions'
+2024-09-28 17:52:07,995 - ERROR - Failed to generate image for prompt: '**Description:** A diagram illustrating the architecture of a stacked model. It should show the training data being split, with one part used to train the base learners and the other part used to train the meta-learner. The output of the base learners is then fed into the meta-learner to make the final prediction.
+
+**Prompt:** Create a diagram titled "Stacked Generalization." Show a box labeled "Training Data." This box should have two arrows coming out: one arrow leading to a box labeled "Base Learners" and another arrow leading to a box labeled "Meta-Learner." The "Base Learners" box should contain representations of three different models. Each of these models should have an arrow pointing to the "Meta-Learner" box. Finally, an arrow should come out of the "Meta-Learner" box and point to a box labeled "Final Prediction."'
+2024-09-28 17:52:07,995 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the bias-variance trade-off. It should show a U-shaped curve with "Bias" on one axis and "Variance" on the other. The bottom of the U represents the optimal model complexity where both bias and variance are balanced.
+
+**Prompt:**  Create a U-shaped curve on a graph. Label the horizontal axis "Model Complexity" and the vertical axis "Error."  On the left side of the curve (low model complexity), write "High Bias, Low Variance." On the right side of the curve (high model complexity), write "Low Bias, High Variance." At the bottom of the curve, write "Optimal Model Complexity."'...
+2024-09-28 17:52:07,995 - ERROR - Error generating image: ImageGenerationModel.generate_images() got an unexpected keyword argument 'image_dimensions'
+2024-09-28 17:52:07,995 - ERROR - Failed to generate image for prompt: '**Description:** A diagram illustrating the bias-variance trade-off. It should show a U-shaped curve with "Bias" on one axis and "Variance" on the other. The bottom of the U represents the optimal model complexity where both bias and variance are balanced.
+
+**Prompt:**  Create a U-shaped curve on a graph. Label the horizontal axis "Model Complexity" and the vertical axis "Error."  On the left side of the curve (low model complexity), write "High Bias, Low Variance." On the right side of the curve (high model complexity), write "Low Bias, High Variance." At the bottom of the curve, write "Optimal Model Complexity."'
+2024-09-28 17:52:07,995 - INFO - Assembling final markdown output...
+2024-09-28 17:52:07,995 - INFO - Markdown output assembled successfully.
+2024-09-28 17:52:07,995 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 17:52:08,014 - INFO - Conversion to JSON successful.
+2024-09-28 17:52:08,015 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-28 17:53:24,966 - INFO - Starting course generation process...
+2024-09-28 17:53:29,599 - INFO - Vertex AI models initialized successfully.
+2024-09-28 17:53:29,599 - INFO - Generating content using CreationSysRole...
+2024-09-28 17:53:29,599 - INFO - Prompt created successfully.
+2024-09-28 17:53:29,599 - INFO - Generating course content using text model...
+2024-09-28 17:54:32,985 - INFO - Generating image for prompt: '**Description:** The diagram illustrates the process of building a random forest. It starts with the original dataset and shows how bootstrap samples are created. Then, for each sample, a subset of features is randomly selected, and a decision tree is trained. Finally, the predictions of all trees are combined.
+**Prompt:**  A diagram showcasing the random forest algorithm. Show a dataset being split into multiple bootstrap samples. Each sample then goes through random feature selection, with a few features chosen (visually represent this).  From these selected features, a decision tree is built for each sample. Lastly, demonstrate how the predictions from each tree are aggregated to get the final prediction. Use clear visuals, arrows, and labels.'...
+2024-09-28 17:54:46,677 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 17:54:46,677 - INFO - Generating image for prompt: '**Description:** This diagram should visually represent how AdaBoost works. It should show an initial dataset with equal weights assigned to each data point. Then, as weak learners are added, show how the weights of misclassified points increase.  
+**Prompt:** A diagram illustrating the AdaBoost algorithm. Show an initial dataset with each point having equal weight (maybe represented by size or color). A weak learner then tries to classify the data.  Highlight the points it misclassifies.  In the next iteration, increase the size/change the color of the misclassified points to depict increased weight. A new weak learner is trained on this adjusted dataset. Repeat this process for a few iterations, showing how weights change and new learners are added.'...
+2024-09-28 17:54:59,571 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-28 17:54:59,571 - INFO - Generating image for prompt: '**Description:** A diagram visually explaining the stacking process. It should show multiple base models being trained on the original data. Then, their predictions are used as input to train a meta-model. The meta-model makes the final prediction.
+**Prompt:** Create a diagram to illustrate the concept of stacking in ensemble learning.  Show the training dataset being used to train multiple diverse base models (like a decision tree, SVM, and a neural network).  Illustrate how the predictions from these base models are then used as input features for a meta-model (perhaps a simple logistic regression model). Finally, show how the meta-model outputs the final prediction.'...
+2024-09-28 17:55:11,603 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-28 17:55:11,604 - INFO - Assembling final m5arkdown output...
+2024-09-28 17:55:11,604 - ERROR - An unexpected error occurred: 'image'
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Desktop\ai-course-generator\models\main_course_generator\script.py", line 146, in main
+    logging.info(f"Generated Image Attributes: {dir(image_data[i]['image'])}")
+                                                    ~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'image'
+2024-09-28 17:58:26,175 - INFO - Starting course generation process...
+2024-09-28 17:58:30,858 - INFO - Vertex AI models initialized successfully.
+2024-09-28 17:58:30,858 - INFO - Generating content using CreationSysRole...
+2024-09-28 17:58:30,858 - INFO - Prompt created successfully.
+2024-09-28 17:58:30,858 - INFO - Generating course content using text model...
+2024-09-28 17:59:44,870 - INFO - Generating image for prompt: '- **Description:** The diagram illustrates the process of bagging. The training dataset is split into multiple subsets through bootstrapping. A base model (e.g., Decision Tree) is trained on each subset. The predictions from each model are then aggregated to produce the final ensemble prediction.
+ - **Prompt:** A diagram illustrating the process of bagging with a decision tree as the base learner. The diagram should show bootstrapping of the original dataset to create multiple training subsets. A separate decision tree should be shown trained on each subset. Finally, the predictions from all trees should be combined to form the ensemble prediction.
+-'...
+2024-09-28 17:59:58,134 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 17:59:58,134 - INFO - Generating image for prompt: '- **Description:** The diagram showcases the AdaBoost algorithm. Starting with equal weights for each data point, a weak learner (e.g., a Decision Stump) is trained. Misclassified instances have their weights increased. The process repeats, with each weak learner focusing more on previously misclassified examples. The final prediction is a weighted combination of all weak learner predictions. 
+ - **Prompt:** A diagram visually representing the AdaBoost algorithm. The diagram should depict several iterations, with each iteration showing the training data with updated weights and the addition of a new weak learner. The final prediction should be shown as a weighted combination of all weak learner outputs.
+-'...
+2024-09-28 18:00:10,050 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-28 18:00:10,050 - INFO - Generating image for prompt: '- **Description:**  Illustrate the process of Gradient Boosting, showing how trees are added sequentially to minimize the loss function. The diagram should emphasize the iterative nature of Gradient Boosting, with each new tree fitting the residuals (errors) of the previous ensemble.
+ - **Prompt:**  A diagram explaining Gradient Boosting. Start with the data points and a simple initial model. Then, depict how a new tree is added to fit the residuals of the previous model. This process repeats, and the final prediction is the sum of the initial model's prediction and the contributions from each added tree.
+-'...
+2024-09-28 18:00:24,662 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-28 18:00:24,663 - INFO - Generating image for prompt: '- **Description:** A diagram illustrating the concept of stacking. Multiple base models (e.g., Decision Tree, SVM, KNN) are trained on the training data. Their predictions on a held-out validation set form a new feature vector for each sample. A meta-model (e.g., Logistic Regression) is then trained on this new dataset to make the final prediction.
+ - **Prompt:** Diagram showcasing Stacked Generalization.  It should depict several base models trained on the training data. The outputs of these models on a separate validation set are then used as input for a meta-learner. This meta-learner is trained to make final predictions based on the outputs from the base learners. 
+-'...
+2024-09-28 18:00:36,472 - INFO - Image saved to main_course/temp\image_4.png successfully.
+2024-09-28 18:00:36,472 - INFO - Generating image for prompt: '- **Description:** A diagram to illustrate blending. Show how predictions from different base models on the training data are combined with specific weights. A simpler model, like linear regression, is then trained on this blended data to produce the final predictions.
+ - **Prompt:** A diagram representing the concept of Blending in ensemble learning. It should show various base models making predictions, and these predictions being combined using weighted averaging. The blended predictions are then fed into a simpler model for making the final predictions.
+-'...
+2024-09-28 18:00:49,807 - INFO - Image saved to main_course/temp\image_5.png successfully.
+2024-09-28 18:00:49,807 - INFO - Assembling final markdown output...
+2024-09-28 18:00:49,808 - INFO - Markdown output assembled successfully.
+2024-09-28 18:00:49,808 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 18:00:49,836 - INFO - Conversion to JSON successful.
+2024-09-28 18:00:49,836 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-28 18:03:56,289 - INFO - Starting course generation process...
+2024-09-28 18:04:00,906 - INFO - Vertex AI models initialized successfully.
+2024-09-28 18:04:00,906 - INFO - Generating content using CreationSysRole...
+2024-09-28 18:04:00,906 - INFO - Prompt created successfully.
+2024-09-28 18:04:00,906 - INFO - Generating course content using text model...
+2024-09-28 18:05:03,780 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the bagging process. It should depict the original dataset being used to create multiple bootstrap samples, with each sample used to train a separate model. The individual model predictions are then combined to generate the final prediction.
+**Prompt:** A diagram showing the bagging process in machine learning, including the creation of bootstrap samples, training individual models, and combining their predictions. Use clear labels and visuals to represent the data flow and model interactions.'...
+2024-09-28 18:05:16,902 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 18:05:16,902 - INFO - Generating image for prompt: '**Description:** A diagram comparing a standard decision tree with a tree constructed in a Random Forest. Highlight that in a Random Forest, only a subset of features is considered at each split. 
+**Prompt:** A side-by-side comparison of a standard decision tree and a decision tree within a random forest. In the Random Forest tree, visually depict the random subset of features considered at each split point.'...
+2024-09-28 18:05:28,344 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-28 18:05:28,344 - INFO - Generating image for prompt: '**Description:** An illustration of the AdaBoost algorithm. Show how instance weights are updated at each iteration, giving more weight to misclassified instances. Also, depict how the weighted predictions from all base models are combined to make the final prediction. 
+**Prompt:** Diagram illustrating the AdaBoost algorithm with a focus on instance weight updates and the combination of weighted predictions. Show how misclassified instances gain higher weights in subsequent iterations.'...
+2024-09-28 18:05:40,664 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-28 18:05:40,665 - INFO - Generating image for prompt: '**Description:**  A diagram illustrating the stacking process. It should depict the training data being used to train multiple base models. The outputs from these base models are then used as input features to train a meta-learner. Finally, the meta-learner makes the final prediction based on the combined outputs of the base models.
+**Prompt:** A diagram showing the stacking process with multiple base models (e.g., SVM, Decision Tree, Logistic Regression) and a meta-learner. Indicate how the base model predictions become features for the meta-learner, which then makes the final prediction.'...
+2024-09-28 18:05:53,896 - INFO - Image saved to main_course/temp\image_4.png successfully.
+2024-09-28 18:05:53,896 - INFO - Assembling final markdown output...
+2024-09-28 18:05:53,896 - ERROR - An unexpected error occurred: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Desktop\ai-course-generator\models\main_course_generator\script.py", line 151, in main
+    final_output += f"{image_data[i]['prompt']['Description']}\n"
+                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2024-09-28 18:08:06,600 - INFO - Starting course generation process...
+2024-09-28 18:08:11,168 - INFO - Vertex AI models initialized successfully.
+2024-09-28 18:08:11,168 - INFO - Generating content using CreationSysRole...
+2024-09-28 18:08:11,168 - INFO - Prompt created successfully.
+2024-09-28 18:08:11,168 - INFO - Generating course content using text model...
+2024-09-28 18:10:05,082 - INFO - Generating image for prompt: '**Description:** A flowchart illustrating the AdaBoost algorithm for classification. It shows the iterative process of training weak learners, calculating error rates and model weights, updating example weights, and finally combining predictions using a weighted majority vote.
+
+**Prompt:** Flowchart of the AdaBoost algorithm for a classification problem. Start with an initialization step where equal weights are assigned to training examples. Then, show an iterative loop with the following steps: train a weak learner, calculate the weighted error rate, calculate the model weight, and update the example weights. Finally, show how the predictions from all weak learners are combined using a weighted majority vote to make the final prediction.'...
+2024-09-28 18:10:19,721 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 18:10:19,721 - INFO - Generating image for prompt: '**Description:** An illustration showing the iterative process of Gradient Boosting for regression. It depicts how the algorithm sequentially adds new models to correct the errors (residuals) made by previous models, gradually improving the overall prediction. 
+
+**Prompt:** Create a diagram that illustrates the iterative process of gradient boosting for a regression problem. Show how the algorithm starts with an initial prediction and then sequentially adds new models to correct the errors (residuals) made by previous models. The diagram should clearly depict the calculation of residuals, the fitting of a new model to the residuals, and the updating of the overall prediction.'...
+2024-09-28 18:10:32,192 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-28 18:10:32,192 - INFO - Generating image for prompt: '**Description:**  A visual representation of the Stacking ensemble method. It shows how the training data is split, base learners are trained, predictions are generated, meta-data is created, and a meta-learner is trained on the meta-data to make the final prediction.
+
+**Prompt:**  Create a diagram illustrating the Stacking ensemble method. Show the following steps:
+    * Splitting the training data into a Level-1 training set and a Level-1 holdout set.
+    * Training multiple base learners on the Level-1 training set.
+    * Using the trained base learners to make predictions on the Level-1 holdout set.
+    * Combining the base learner predictions with the original features to create meta-data.
+    * Training a meta-learner on the meta-data.
+    *  The meta-learner making the final prediction.'...
+2024-09-28 18:10:44,832 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-28 18:10:44,832 - INFO - Assembling final markdown output...
+2024-09-28 18:10:44,832 - INFO - Markdown output assembled successfully.
+2024-09-28 18:10:44,832 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 18:10:44,874 - INFO - Conversion to JSON successful.
+2024-09-28 18:10:44,875 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-28 18:18:23,515 - INFO - Starting course generation process...
+2024-09-28 18:18:28,259 - INFO - Vertex AI models initialized successfully.
+2024-09-28 18:18:28,259 - INFO - Generating content using CreationSysRole...
+2024-09-28 18:18:28,260 - INFO - Prompt created successfully.
+2024-09-28 18:18:28,260 - INFO - Generating course content using text model...
+2024-09-28 18:20:10,621 - ERROR - Error generating text: Cannot get the response text.
+Cannot get the Candidate text.
+Response candidate content has no parts (and thus no text). The candidate is likely blocked by the safety filters.
+Content:
+{}
+Candidate:
+{
+  "finish_reason": "RECITATION",
+  "safety_ratings": [
+    {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.10986328,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.095214844
+    },
+    {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.16015625,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.1953125
+    },
+    {
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.15136719,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.08154297
+    },
+    {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.10253906,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.19726562
+    }
+  ],
+  "citation_metadata": {
+    "citations": [
+      {
+        "start_index": 9322,
+        "end_index": 9452,
+        "uri": "https://anyuakmedia.com/introduction-to-lstm-and-its-significance-in-ai-driven-sequence-learning/"
+      },
+      {
+        "start_index": 20377,
+        "end_index": 20499,
+        "uri": "https://github.com/saikumar1503/saikumar_neela_Datascience"
+      }
+    ]
+  },
+  "avg_logprobs": "NaN"
+}
+Response:
+{
+  "candidates": [
+    {
+      "finish_reason": "RECITATION",
+      "safety_ratings": [
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.10986328,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.095214844
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.16015625,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.1953125
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.15136719,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.08154297
+        },
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.10253906,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.19726562
+        }
+      ],
+      "citation_metadata": {
+        "citations": [
+          {
+            "start_index": 9322,
+            "end_index": 9452,
+            "uri": "https://anyuakmedia.com/introduction-to-lstm-and-its-significance-in-ai-driven-sequence-learning/"
+          },
+          {
+            "start_index": 20377,
+            "end_index": 20499,
+            "uri": "https://github.com/saikumar1503/saikumar_neela_Datascience"
+          }
+        ]
+      },
+      "avg_logprobs": "NaN"
+    }
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 1217,
+    "total_token_count": 1217
+  }
+}
+2024-09-28 18:20:10,621 - ERROR - Failed to generate course content. Exiting.
+2024-09-28 18:21:10,080 - INFO - Starting course generation process...
+2024-09-28 18:21:14,717 - INFO - Vertex AI models initialized successfully.
+2024-09-28 18:21:14,717 - INFO - Generating content using CreationSysRole...
+2024-09-28 18:21:14,717 - INFO - Prompt created successfully.
+2024-09-28 18:21:14,717 - INFO - Generating course content using text model...
+2024-09-28 18:22:35,292 - INFO - Generating image for prompt: '- **Description:** A basic autoencoder architecture. The diagram should depict the input layer, encoder (multiple layers), latent space, decoder (multiple layers), and output layer. Indicate the flow of data through the network.
+    - **Prompt:**  A diagram showing the architecture of a basic autoencoder neural network with an input layer, an encoder, a latent space representation, a decoder, and an output layer.
+    -'...
+2024-09-28 18:22:50,003 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 18:22:50,003 - INFO - Generating image for prompt: '- **Description:** Architectures of undercomplete, overcomplete, and convolutional autoencoders. Use different colors or highlights to emphasize the key structural variations.
+    - **Prompt:** A comparative diagram illustrating the architectures of undercomplete, overcomplete, and convolutional autoencoders.
+    -'...
+2024-09-28 18:23:03,372 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-28 18:23:03,372 - INFO - Generating image for prompt: '- **Description:**  Illustrate the concept of dimensionality reduction with an autoencoder. Show how a high-dimensional input is mapped to a lower-dimensional latent space and then reconstructed.
+    - **Prompt:**  A diagram demonstrating how an autoencoder is used for dimensionality reduction, mapping high-dimensional input data to a lower-dimensional latent space.
+    -'...
+2024-09-28 18:23:15,299 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-28 18:23:15,299 - INFO - Generating image for prompt: '- **Description:**  A basic GAN architecture, including the generator network, discriminator network, and the flow of data and feedback during training. 
+    - **Prompt:** A diagram of a Generative Adversarial Network (GAN) showing the generator network, the discriminator network, and the flow of data during training. 
+    -'...
+2024-09-28 18:23:28,632 - INFO - Image saved to main_course/temp\image_4.png successfully.
+2024-09-28 18:23:28,632 - INFO - Generating image for prompt: '- **Description:** Architecture of a DCGAN, highlighting the use of convolutional and upsampling layers.
+    - **Prompt:** A diagram showing the architecture of a Deep Convolutional Generative Adversarial Network (DCGAN), including convolutional and upsampling layers.
+    -'...
+2024-09-28 18:23:42,174 - INFO - Image saved to main_course/temp\image_5.png successfully.
+2024-09-28 18:23:42,174 - INFO - Generating image for prompt: '- **Description:** Illustrate the process of text-to-image synthesis using a GAN.  Show how a text description is fed as input, and the GAN generates a corresponding image. 
+    - **Prompt:**  A diagram representing text-to-image synthesis using a GAN. The diagram should show a textual description as input and the generated image as output. 
+    -'...
+2024-09-28 18:23:54,987 - INFO - Image saved to main_course/temp\image_6.png successfully.
+2024-09-28 18:23:54,987 - INFO - Generating image for prompt: '- **Description:**  The basic RL interaction loop, showing the agent, environment, state, action, and reward.  
+    - **Prompt:** A diagram illustrating the reinforcement learning interaction loop. The diagram should clearly show the agent, the environment, state, action, and reward.
+    -'...
+2024-09-28 18:24:08,484 - INFO - Image saved to main_course/temp\image_7.png successfully.
+2024-09-28 18:24:08,484 - INFO - Generating image for prompt: '- **Description:**  A simple MDP represented as a state transition diagram. Show states, actions, transition probabilities, and rewards.
+    - **Prompt:** A state transition diagram illustrating a simple Markov Decision Process (MDP) with states, actions, transition probabilities, and rewards.
+    -'...
+2024-09-28 18:24:20,787 - INFO - Image saved to main_course/temp\image_8.png successfully.
+2024-09-28 18:24:20,787 - INFO - Generating image for prompt: '- **Description:**  A Q-table representing Q-values for a small grid-world problem.
+    - **Prompt:** A Q-table illustrating Q-values for each state-action pair in a small grid-world environment.
+    -'...
+2024-09-28 18:24:32,662 - INFO - Image saved to main_course/temp\image_9.png successfully.
+2024-09-28 18:24:32,662 - INFO - Generating image for prompt: '- **Description:**  A plot showing the agent's performance (e.g., average reward per episode) over time during training using a policy gradient method. 
+    - **Prompt:** A graph showing the performance of an agent trained using a policy gradient method, plotting the average reward per episode over time.
+    -'...
+2024-09-28 18:24:47,712 - INFO - Image saved to main_course/temp\image_10.png successfully.
+2024-09-28 18:24:47,712 - INFO - Generating image for prompt: '- **Description:**  Architecture of a DQN agent, highlighting the use of a deep neural network to approximate the Q-value function.
+    - **Prompt:**  A diagram illustrating the architecture of a Deep Q-Network (DQN) agent, showing the deep neural network used to approximate the Q-value function.
+    -'...
+2024-09-28 18:24:59,782 - INFO - Image saved to main_course/temp\image_11.png successfully.
+2024-09-28 18:24:59,782 - INFO - Generating image for prompt: '- **Description:** A high-level architecture of an actor-critic agent, showing the actor and critic networks and their interactions with the environment. 
+    - **Prompt:** A diagram showing the architecture of an actor-critic agent in deep reinforcement learning, clearly distinguishing the actor and critic networks. 
+    -'...
+2024-09-28 18:25:13,119 - INFO - Image saved to main_course/temp\image_12.png successfully.
+2024-09-28 18:25:13,119 - INFO - Assembling final markdown output...
+2024-09-28 18:25:13,119 - INFO - Markdown output assembled successfully.
+2024-09-28 18:25:13,119 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 18:25:13,158 - INFO - Conversion to JSON successful.
+2024-09-28 18:25:13,158 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-28 20:54:52,777 - INFO - Starting course generation process...
+2024-09-28 20:54:58,060 - INFO - Vertex AI models initialized successfully.
+2024-09-28 20:54:58,060 - INFO - Generating content using CreationSysRole...
+2024-09-28 20:54:58,060 - INFO - Prompt created successfully.
+2024-09-28 20:54:58,060 - INFO - Generating course content using text model...
+2024-09-28 20:55:32,230 - INFO - Generating image for prompt: '*   **Description:**  A diagram illustrating the structure of a relational database with two tables (Books and Authors) and their interconnecting relationship through a shared key (AuthorID).
+        *   **Prompt:** "Generate an image illustrating the concept of a relational database. The image should depict two tables: 'Books' and 'Authors.' The 'Books' table should have columns for 'BookID,' 'Title,' 'AuthorID,' and 'Genre.' The 'Authors' table should have columns for 'AuthorID,' 'AuthorName,' and 'Nationality.' Highlight the shared 'AuthorID' column to demonstrate the relationship between the two tables."
+    *'...
+2024-09-28 20:55:46,460 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-28 20:55:46,460 - INFO - Generating image for prompt: '*   **Description:**  A visual representation of how the "Customers" table would look after the CREATE TABLE and INSERT INTO statements. It should showcase the column names (CustomerID, CustomerName, City) and the inserted row with data (1, John Doe, New York).
+        *   **Prompt:** "Generate a simple table structure for 'Customers'. It should have three columns: 'CustomerID' as INT, 'CustomerName' as VARCHAR, and 'City' as VARCHAR. Populate the table with one row representing customer with ID 1, named 'John Doe' from 'New York'."
+    *'...
+2024-09-28 20:55:54,965 - ERROR - Error generating image: list index out of range
+2024-09-28 20:55:54,965 - ERROR - Failed to generate image for prompt: '*   **Description:**  A visual representation of how the "Customers" table would look after the CREATE TABLE and INSERT INTO statements. It should showcase the column names (CustomerID, CustomerName, City) and the inserted row with data (1, John Doe, New York).
+        *   **Prompt:** "Generate a simple table structure for 'Customers'. It should have three columns: 'CustomerID' as INT, 'CustomerName' as VARCHAR, and 'City' as VARCHAR. Populate the table with one row representing customer with ID 1, named 'John Doe' from 'New York'."
+    *'
+2024-09-28 20:55:54,965 - INFO - Assembling final markdown output...
+2024-09-28 20:55:54,965 - INFO - Markdown output assembled successfully.
+2024-09-28 20:55:54,965 - INFO - Converting markdown to HTML and JSON...
+2024-09-28 20:55:54,983 - INFO - Conversion to JSON successful.
+2024-09-28 20:55:54,983 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-29 20:09:16,917 - INFO - Starting course generation process...
+2024-09-29 20:09:23,769 - INFO - Vertex AI models initialized successfully.
+2024-09-29 20:09:23,769 - INFO - Generating content using CreationSysRole...
+2024-09-29 20:09:23,769 - INFO - Prompt created successfully.
+2024-09-29 20:09:23,769 - INFO - Generating course content using text model...
+2024-09-29 20:10:02,066 - INFO - Generating image for prompt: '**Description:** A scatter plot illustrating the KNN algorithm in action for classification. The plot displays data points belonging to two classes (represented by different colors). A new data point (marked with a question mark) needs to be classified. The KNN algorithm identifies its K nearest neighbors (circled), and the new point is assigned to the class most common among these neighbors.
+
+**Prompt:** A scatter plot showing data points of two classes, with a new data point labeled "?". Circle the K nearest neighbors of the new point, and visually represent the classification decision based on the majority class among the neighbors.'...
+2024-09-29 20:10:17,101 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-29 20:10:17,101 - INFO - Assembling final markdown output...
+2024-09-29 20:10:17,101 - INFO - Markdown output assembled successfully.
+2024-09-29 20:10:17,101 - INFO - Converting markdown to HTML and JSON...
+2024-09-29 20:10:17,115 - INFO - Conversion to JSON successful.
+2024-09-29 20:10:17,116 - INFO - Markdown output saved to main_course/temp.md successfully.
+2024-09-29 20:21:22,348 - INFO - Starting course generation process...
+2024-09-29 20:21:27,344 - INFO - Vertex AI models initialized successfully.
+2024-09-29 20:21:27,344 - INFO - Generating content using CreationSysRole...
+2024-09-29 20:21:27,344 - INFO - Prompt created successfully.
+2024-09-29 20:21:27,344 - INFO - Generating course content using text model...
+2024-09-29 20:22:51,682 - INFO - Generating image for prompt: '* **Description:** An illustration of a formal garden with symmetrical flower beds, geometric pathways, and neatly trimmed hedges.
+            * **Prompt:** "Generate an image of a formal garden with a central fountain, symmetrical flower beds containing roses and lavender, surrounded by gravel pathways and low hedges."
+            *'...
+2024-09-29 20:23:05,159 - INFO - Image saved to main_course/temp\image_1.png successfully.
+2024-09-29 20:23:05,159 - INFO - Generating image for prompt: '* **Description:** A visualization of an informal cottage garden with a mix of colorful flowers, winding paths, and a rustic fence.
+            * **Prompt:** "Create an image of an informal cottage garden with a picket fence, overflowing with a variety of flowers like sunflowers, daisies, and poppies."
+            *'...
+2024-09-29 20:23:17,660 - INFO - Image saved to main_course/temp\image_2.png successfully.
+2024-09-29 20:23:17,660 - INFO - Generating image for prompt: '* **Description:** Show various containers like terracotta pots, window boxes, and hanging baskets filled with blooming flowers.
+            * **Prompt:** "Design an image showcasing a variety of container gardens on a balcony, featuring colorful petunias in hanging baskets, herbs in window boxes, and geraniums in terracotta pots."
+            *'...
+2024-09-29 20:23:30,616 - INFO - Image saved to main_course/temp\image_3.png successfully.
+2024-09-29 20:23:30,616 - INFO - Generating image for prompt: '* **Description:** A visual representation of the tightly packed particles in clay soil.
+            * **Prompt:** "Create an image that shows the close-packed nature of clay soil particles, illustrating its dense structure." 
+            *'...
+2024-09-29 20:23:42,853 - INFO - Image saved to main_course/temp\image_4.png successfully.
+2024-09-29 20:23:42,853 - INFO - Generating image for prompt: '* **Description:** Illustrate the larger, loosely packed particles of sandy soil, highlighting its good drainage.
+            * **Prompt:** "Show the loose arrangement of sandy soil particles, demonstrating its excellent drainage but poor nutrient retention capacity."
+            *'...
+2024-09-29 20:23:56,232 - INFO - Image saved to main_course/temp\image_5.png successfully.
+2024-09-29 20:23:56,232 - INFO - Generating image for prompt: '* **Description:** Depict the structure of loamy soil with a mixture of particle sizes, showcasing its well-balanced composition.
+            * **Prompt:** "Visualize the ideal soil structure with a balanced mix of sand, silt, and clay particles, representing loamy soil and its excellent properties." 
+            *'...
+2024-09-29 20:24:08,924 - INFO - Image saved to main_course/temp\image_6.png successfully.
+2024-09-29 20:24:08,925 - INFO - Assembling final markdown output...
+2024-09-29 20:24:08,925 - INFO - Markdown output assembled successfully.
+2024-09-29 20:24:08,925 - INFO - Converting markdown to HTML and JSON...
+2024-09-29 20:24:08,988 - INFO - Conversion to JSON successful.
+2024-09-29 20:24:08,991 - INFO - Markdown output saved to main_course/temp.md successfully.

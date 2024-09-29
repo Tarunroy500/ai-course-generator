@@ -32,6 +32,7 @@ function AddNewCourse() {
     'difficulty': '',
     'duration': '',
     'identifier': '', 
+  
   });
 
 

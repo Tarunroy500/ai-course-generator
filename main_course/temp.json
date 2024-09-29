@@ -1,0 +1,1260 @@
+{
+  "h2": [{ "_value": "Flower Gardening Online Course" }],
+  "p": [
+    { "strong": [{ "_value": "Duration:" }], "_value": "2 Weeks" },
+    {
+      "strong": [{ "_value": "Course Description:" }],
+      "_value": "This course is designed to provide a comprehensive introduction to the rewarding world of flower gardening. Whether you're a complete novice or have some experience, this course will equip you with the knowledge and practical skills to design, plant, and maintain a thriving and beautiful flower garden."
+    },
+    { "strong": [{ "_value": "Table of Contents" }] },
+    { "strong": [{ "_value": "Week 1: Garden Planning & Soil Preparation" }] },
+    { "strong": [{ "_value": "Day 1: Introduction to Flower Gardening" }] },
+    { "strong": [{ "_value": "Day 2: Choosing the Right Location" }] },
+    { "strong": [{ "_value": "Day 3: Understanding Soil Types & Testing" }] },
+    { "strong": [{ "_value": "Day 4: Soil Preparation and Improvement" }] },
+    { "strong": [{ "_value": "Day 5: Garden Design Basics" }] },
+    { "strong": [{ "_value": "Week 2: Plant Selection, Care & Maintenance" }] },
+    {
+      "strong": [
+        { "_value": "Day 6: Selecting Flowers: Annuals vs. Perennials" }
+      ]
+    },
+    { "strong": [{ "_value": "Day 7: Planting Techniques and Timing" }] },
+    { "strong": [{ "_value": "Day 8: Watering, Fertilizing, and Mulching" }] },
+    { "strong": [{ "_value": "Day 9: Pest and Disease Control" }] },
+    { "strong": [{ "_value": "Day 10: Maintaining Your Flower Garden" }] },
+    { "strong": [{ "_value": "Conclusion" }] },
+    {
+      "_value": "Congratulations on completing the Flower Gardening online course! You now have the knowledge and skills to design, plant, and maintain a thriving and beautiful flower garden. Remember that gardening is a journey of continuous learning and experimentation. Enjoy the process, embrace the beauty of nature, and reap the rewards of your hard work. Happy gardening!"
+    }
+  ],
+  "ul": [
+    {
+      "li": [
+        {
+          "_value": "Week 1: Garden Planning & Soil Preparation",
+          "ul": [
+            {
+              "li": [
+                { "_value": "Day 1: Introduction to Flower Gardening" },
+                { "_value": "Day 2: Choosing the Right Location" },
+                { "_value": "Day 3: Understanding Soil Types and Testing" },
+                { "_value": "Day 4: Soil Preparation and Improvement" },
+                { "_value": "Day 5: Garden Design Basics" }
+              ]
+            }
+          ]
+        },
+        {
+          "_value": "Week 2: Plant Selection, Care, and Maintenance",
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Day 6: Selecting Flowers: Annuals vs. Perennials"
+                },
+                { "_value": "Day 7: Planting Techniques and Timing" },
+                { "_value": "Day 8: Watering, Fertilizing, and Mulching" },
+                { "_value": "Day 9: Pest and Disease Control" },
+                { "_value": "Day 10: Maintaining Your Flower Garden" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Welcome to the wonderful world of flower gardening! This introductory session will cover the basic principles and benefits of cultivating your own flower garden."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Why Flower Gardening?" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Aesthetic Appeal:" }],
+                          "_value": "Discuss how flowers enhance the beauty of any space, adding vibrant colors, textures, and fragrances."
+                        },
+                        {
+                          "strong": [{ "_value": "Therapeutic Benefits:" }],
+                          "_value": "Explore the calming and stress-relieving effects of gardening, highlighting its positive impact on mental well-being."
+                        },
+                        {
+                          "strong": [{ "_value": "Environmental Benefits:" }],
+                          "_value": "Explain how flower gardens support pollinators like bees and butterflies, contributing to a healthy ecosystem."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Types of Flower Gardens:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Formal Gardens:" }],
+                          "_value": "Characterized by geometric layouts, symmetrical designs, and often featuring hedges or manicured lawns.",
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "img": [
+                                    {
+                                      "_attributes": {
+                                        "alt": "Generated Image",
+                                        "src": "temp\\image_0.png"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "p": [
+            {
+              "strong": [{ "_value": "Description:" }, { "_value": "Prompt:" }],
+              "_values": [
+                "An illustration of a formal garden with symmetrical flower beds, geometric pathways, and neatly trimmed hedges.\n            *",
+                "\"Generate an image of a formal garden with a central fountain, symmetrical flower beds containing roses and lavender, surrounded by gravel pathways and low hedges.\"\n            *"
+              ]
+            }
+          ],
+          "pre": [
+            {
+              "code": [
+                {
+                  "_value": "* **Informal Gardens:** Featuring a more relaxed and natural design with curving pathways, mixed plantings, and less emphasis on strict symmetry.\n    * ![Generated Image](temp\\image_1.png)"
+                }
+              ]
+            }
+          ],
+          "ul": [
+            {
+              "li": [
+                {
+                  "p": [
+                    {
+                      "strong": [
+                        { "_value": "Description:" },
+                        { "_value": "Prompt:" }
+                      ],
+                      "_values": [
+                        "A visualization of an informal cottage garden with a mix of colorful flowers, winding paths, and a rustic fence.\n        *",
+                        "\"Create an image of an informal cottage garden with a picket fence, overflowing with a variety of flowers like sunflowers, daisies, and poppies.\"\n        *"
+                      ]
+                    }
+                  ],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Container Gardens:" }],
+                          "_value": "Ideal for limited spaces, using pots, planters, and hanging baskets to grow flowers on balconies, patios, or small yards.",
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "img": [
+                                    {
+                                      "_attributes": {
+                                        "alt": "Generated Image",
+                                        "src": "temp\\image_2.png"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "strong": [{ "_value": "Description:" }],
+                          "_value": "Show various containers like terracotta pots, window boxes, and hanging baskets filled with blooming flowers.",
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "strong": [{ "_value": "Prompt:" }],
+                                  "_value": "\"Design an image showcasing a variety of container gardens on a balcony, featuring colorful petunias in hanging baskets, herbs in window boxes, and geraniums in terracotta pots.\"\n*"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "p": [{ "strong": [{ "_value": "Key Points:" }] }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Understanding the motivations and different types of gardens lays the groundwork for a successful flower gardening journey."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Short quiz testing understanding of the benefits and various types of flower gardens."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Selecting the right location is crucial for the success of your flower garden. Today, we'll explore the key factors to consider when choosing where to plant."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Sunlight Requirements:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Full Sun:" }],
+                          "_value": "Explain that most flowering plants thrive in locations with at least 6 hours of direct sunlight per day. Provide examples like roses, sunflowers, and lavender."
+                        },
+                        {
+                          "strong": [{ "_value": "Partial Shade:" }],
+                          "_value": "Discuss plants that prefer some shade during the hottest part of the day. Examples include impatiens, hostas, and ferns."
+                        },
+                        {
+                          "strong": [{ "_value": "Shade:" }],
+                          "_value": "Cover shade-loving plants that tolerate low light conditions, such as bleeding hearts, astilbe, and certain types of ferns."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Soil Drainage:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [
+                            { "_value": "Importance of Well-Drained Soil:" }
+                          ],
+                          "_value": "Emphasize that good drainage is essential to prevent root rot. Explain how to assess soil drainage."
+                        },
+                        {
+                          "strong": [{ "_value": "Improving Drainage:" }],
+                          "_value": "Discuss methods like amending clay soil with organic matter or building raised beds."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Accessibility and Convenience:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Ease of Access:" }],
+                          "_value": "Highlight the importance of choosing a location that is easily accessible for watering, weeding, and other maintenance tasks."
+                        },
+                        {
+                          "strong": [
+                            { "_value": "Proximity to Water Source:" }
+                          ],
+                          "_value": "Stress the convenience of having a water source nearby, especially during dry periods."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Carefully consider sunlight, soil, and accessibility to ensure optimal growing conditions for your flower garden."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "_value": "Case study analysis: Students analyze different garden locations and identify their suitability based on the factors discussed."
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Soil is the foundation of a healthy garden. Today we'll delve into different soil types and the importance of soil testing."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Soil Types:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Clay Soil:" }],
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "strong": [{ "_value": "Description:" }],
+                                  "_value": "Characterized by its fine particles, dense structure, and poor drainage. It's rich in nutrients but can become compacted easily."
+                                },
+                                {
+                                  "img": [
+                                    {
+                                      "_attributes": {
+                                        "alt": "Generated Image",
+                                        "src": "temp\\image_3.png"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Description:" }, { "_value": "Prompt:" }],
+          "_values": [
+            "A visual representation of the tightly packed particles in clay soil.\n            *",
+            "\"Create an image that shows the close-packed nature of clay soil particles, illustrating its dense structure.\" \n            *"
+          ],
+          "pre": [
+            {
+              "code": [
+                {
+                  "_value": "* **Sandy Soil:**\n    * **Description:** Composed of larger particles, resulting in good drainage but poor water and nutrient retention.\n    * ![Generated Image](temp\\image_4.png)"
+                }
+              ]
+            }
+          ],
+          "ul": [
+            {
+              "li": [
+                {
+                  "p": [
+                    {
+                      "strong": [
+                        { "_value": "Description:" },
+                        { "_value": "Prompt:" }
+                      ],
+                      "_values": [
+                        "Illustrate the larger, loosely packed particles of sandy soil, highlighting its good drainage.\n        *",
+                        "\"Show the loose arrangement of sandy soil particles, demonstrating its excellent drainage but poor nutrient retention capacity.\"\n        *"
+                      ]
+                    }
+                  ],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Loamy Soil:" }],
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "strong": [{ "_value": "Description:" }],
+                                  "_value": "Considered the ideal soil type for gardening, offering a balanced mix of sand, silt, and clay. Loamy soil provides good drainage, aeration, and nutrient retention."
+                                },
+                                {
+                                  "img": [
+                                    {
+                                      "_attributes": {
+                                        "alt": "Generated Image",
+                                        "src": "temp\\image_5.png"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "p": [
+                            {
+                              "strong": [{ "_value": "Description:" }],
+                              "_value": "Depict the structure of loamy soil with a mixture of particle sizes, showcasing its well-balanced composition."
+                            }
+                          ],
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "strong": [{ "_value": "Prompt:" }],
+                                  "_value": "\"Visualize the ideal soil structure with a balanced mix of sand, silt, and clay particles, representing loamy soil and its excellent properties.\" \n*"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "p": [{ "strong": [{ "_value": "Silty Soil:" }] }],
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "strong": [{ "_value": "Description:" }],
+                                  "_value": "Composed of fine particles, silty soil is fertile and retains moisture well but can become compacted, affecting drainage."
+                                },
+                                { "strong": [{ "_value": "Soil Testing:" }] }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "strong": [{ "_value": "Importance:" }],
+                          "_value": "Explain that soil testing provides valuable information about the pH level and nutrient content of your soil."
+                        },
+                        {
+                          "strong": [{ "_value": "How to Test:" }],
+                          "_value": "Guide students on how to collect soil samples and where to send them for analysis."
+                        },
+                        {
+                          "strong": [{ "_value": "Interpreting Results:" }],
+                          "_value": "Teach students how to read a soil test report and understand the recommendations for amendments."
+                        },
+                        {
+                          "strong": [{ "_value": "Key Points:" }],
+                          "_value": "Identifying your soil type and conducting a soil test are essential steps in creating the optimal growing environment."
+                        },
+                        {
+                          "strong": [{ "_value": "Assessment:" }],
+                          "ul": [
+                            {
+                              "li": [
+                                {
+                                  "_value": "Multiple-choice questions on soil types and their characteristics."
+                                },
+                                {
+                                  "_value": "Short answer questions on interpreting a sample soil test report."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Today's session will focus on preparing your soil for planting, covering techniques to improve its structure, fertility, and drainage."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Clearing the Area:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [
+                            { "_value": "Removing Existing Vegetation:" }
+                          ],
+                          "_value": "Explain methods like hand-pulling weeds, using a garden hoe, or applying an organic herbicide."
+                        },
+                        {
+                          "strong": [{ "_value": "Clearing Debris:" }],
+                          "_value": "Stress the importance of removing rocks, roots, and other debris that can hinder plant growth."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Improving Soil Structure:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Adding Organic Matter:" }],
+                          "_value": "Explain the benefits of incorporating compost, aged manure, or leaf mold to improve soil structure, drainage, and nutrient content."
+                        },
+                        {
+                          "strong": [{ "_value": "Cover Crops:" }],
+                          "_value": "Discuss how planting cover crops like clover or buckwheat can enrich the soil with nutrients and improve its structure."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Adjusting Soil pH:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Understanding pH:" }],
+                          "_value": "Briefly explain the pH scale and its impact on nutrient availability."
+                        },
+                        {
+                          "strong": [{ "_value": "Lowering pH:" }],
+                          "_value": "If soil is too alkaline, discuss methods like adding sulfur or aluminum sulfate."
+                        },
+                        {
+                          "strong": [{ "_value": "Raising pH:" }],
+                          "_value": "If soil is too acidic, cover the application of lime."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Proper soil preparation is essential for healthy plant growth, ensuring good drainage, aeration, and nutrient availability."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "_value": "Practical exercise: Students will develop a soil preparation plan for a hypothetical garden, including steps for clearing, amending, and adjusting pH based on soil test results."
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "This session will cover the fundamentals of garden design, providing you with the tools to create a visually appealing and functional outdoor space."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Design Principles:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Balance:" }],
+                          "_value": "Discuss symmetrical and asymmetrical balance, explaining how to create visual harmony."
+                        },
+                        {
+                          "strong": [{ "_value": "Focal Points:" }],
+                          "_value": "Explain how to draw the eye using focal points like specimen plants, statues, or water features."
+                        },
+                        {
+                          "strong": [{ "_value": "Rhythm and Repetition:" }],
+                          "_value": "Cover the use of repeated elements like color, shape, or plant material to create unity and flow."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Planning Your Layout:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [
+                            { "_value": "Consider Purpose and Style:" }
+                          ],
+                          "_value": "Discuss different garden styles (e.g., cottage garden, formal garden) and their suitability for various purposes."
+                        },
+                        {
+                          "strong": [{ "_value": "Sketching Your Design:" }],
+                          "_value": "Emphasize the importance of drawing a rough sketch to visualize the layout, considering factors like size, shape, and existing features."
+                        },
+                        {
+                          "strong": [{ "_value": "Plant Selection:" }],
+                          "_value": "Briefly touch on choosing plants based on their mature size, color, bloom time, and growth habit to achieve the desired look."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Practical Considerations:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Pathways:" }],
+                          "_value": "Discuss materials and design considerations for walkways."
+                        },
+                        {
+                          "strong": [{ "_value": "Seating Areas:" }],
+                          "_value": "Explain how to incorporate seating for relaxation and enjoyment."
+                        },
+                        {
+                          "strong": [{ "_value": "Hardscaping:" }],
+                          "_value": "Briefly cover the use of fences, walls, trellises, or other hardscaping elements."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Successful garden design involves applying design principles, careful planning, and considering both aesthetics and functionality."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "_value": "Design project: Students will create a basic garden design plan for a small space, incorporating design principles, plant choices, and practical elements."
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "This session will guide you through the exciting process of selecting flowers for your garden, focusing on the differences between annuals and perennials."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Annuals:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Definition:" }],
+                          "_value": "Explain that annual plants complete their life cycle within one growing season, flowering profusely but needing to be replanted each year."
+                        },
+                        {
+                          "strong": [{ "_value": "Examples:" }],
+                          "_value": "Showcase popular annuals like petunias, zinnias, marigolds, and cosmos, highlighting their vibrant colors and diverse bloom forms."
+                        },
+                        {
+                          "strong": [{ "_value": "Advantages:" }],
+                          "_value": "Discuss the extended bloom time, instant color impact, and wide variety of annuals available."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Perennials:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Definition:" }],
+                          "_value": "Describe perennials as plants that live for more than two years, typically blooming for a shorter period than annuals but returning year after year."
+                        },
+                        {
+                          "strong": [{ "_value": "Examples:" }],
+                          "_value": "Highlight various perennials like coneflowers, lavender, daylilies, and salvias, showcasing their different bloom times, heights, and textures."
+                        },
+                        {
+                          "strong": [{ "_value": "Advantages:" }],
+                          "_value": "Discuss the cost-effectiveness, reduced planting effort, and the establishment of a more permanent garden structure."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Biennials:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Definition:" }],
+                          "_value": "Briefly explain that biennials complete their life cycle in two years, typically growing vegetatively in the first year and flowering in the second."
+                        },
+                        {
+                          "strong": [{ "_value": "Examples:" }],
+                          "_value": "Provide examples like foxgloves, hollyhocks, and sweet William."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Choosing the Right Plants:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Consider Your Climate:" }],
+                          "_value": "Emphasize the importance of selecting plants suited to your local climate and hardiness zone."
+                        },
+                        {
+                          "strong": [
+                            { "_value": "Assess Sunlight and Soil Conditions:" }
+                          ],
+                          "_value": "Remind students to choose plants that match the light and soil conditions in their garden."
+                        },
+                        {
+                          "strong": [{ "_value": "Color Schemes and Themes:" }],
+                          "_value": "Discuss using color theory and creating cohesive planting schemes."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Understanding the characteristics of annuals, perennials, and biennials allows you to create a diverse and visually appealing garden."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Students will categorize a list of flowers as annuals, perennials, or biennials."
+                },
+                {
+                  "_value": "Students will select appropriate annuals and perennials for a hypothetical garden, considering factors like bloom time, color, and growth habit."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Today, we'll cover essential planting techniques and the optimal timing for planting different types of flowers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [
+                    { "_value": "Starting from Seed vs. Transplanting:" }
+                  ],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Starting from Seed:" }],
+                          "_value": "Discuss the advantages (cost-effectiveness, wider variety) and challenges (longer lead time, more demanding) of starting seeds indoors or directly sowing them in the garden."
+                        },
+                        {
+                          "strong": [{ "_value": "Transplanting:" }],
+                          "_value": "Explain the process of purchasing seedlings from a nursery and transplanting them into your garden, highlighting the benefits of a head start and established root systems."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Planting Techniques:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Preparing Planting Holes:" }],
+                          "_value": "Emphasize the importance of digging holes twice as wide and just as deep as the root ball of the plant."
+                        },
+                        {
+                          "strong": [{ "_value": "Planting Depth:" }],
+                          "_value": "Discuss the significance of planting at the correct depth, ensuring the crown of the plant is level with the soil surface."
+                        },
+                        {
+                          "strong": [{ "_value": "Backfilling and Watering:" }],
+                          "_value": "Explain how to backfill the hole, gently firm the soil, and water thoroughly to eliminate air pockets."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Timing Your Planting:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Spring-Planting:" }],
+                          "_value": "Discuss the ideal time to plant most annuals and tender perennials after the last frost."
+                        },
+                        {
+                          "strong": [{ "_value": "Fall-Planting:" }],
+                          "_value": "Explain the benefits of planting hardy perennials and biennials in the fall, allowing them to establish roots before winter."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Proper planting techniques and timing contribute significantly to the successful establishment and growth of your flowers."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Step-by-step explanation of how to transplant a seedling from a pot into the garden, including diagrams or images."
+                },
+                {
+                  "_value": "True or False questions on planting depth and timing."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "This session will focus on essential care practices � watering, fertilizing, and mulching � to keep your flowers healthy and thriving."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Watering:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Watering Needs:" }],
+                          "_value": "Explain that different plants have different watering requirements, and soil type also plays a role."
+                        },
+                        {
+                          "strong": [{ "_value": "Deep Watering Techniques:" }],
+                          "_value": "Emphasize the importance of watering deeply and less frequently to encourage deep root growth."
+                        },
+                        {
+                          "strong": [
+                            {
+                              "_value": "Signs of Overwatering and Underwatering:"
+                            }
+                          ],
+                          "_value": "Discuss the visual cues of both conditions, helping students identify and address problems early on."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Fertilizing:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Types of Fertilizers:" }],
+                          "_value": "Briefly explain the differences between granular, liquid, and slow-release fertilizers."
+                        },
+                        {
+                          "strong": [{ "_value": "Nutrient Requirements:" }],
+                          "_value": "Discuss the importance of nitrogen (N), phosphorus (P), and potassium (K) for plant growth and flowering."
+                        },
+                        {
+                          "strong": [{ "_value": "Fertilizing Schedule:" }],
+                          "_value": "Explain the basics of a balanced fertilizing schedule, adjusting frequency and amount based on plant needs."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Mulching:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Benefits of Mulch:" }],
+                          "_value": "Discuss how mulch helps retain soil moisture, suppress weeds, and regulate soil temperature."
+                        },
+                        {
+                          "strong": [{ "_value": "Types of Mulch:" }],
+                          "_value": "Cover various mulch options like bark chips, straw, and shredded leaves, explaining their pros and cons."
+                        },
+                        {
+                          "strong": [{ "_value": "Applying Mulch:" }],
+                          "_value": "Demonstrate the correct way to apply mulch, maintaining a safe distance from plant stems."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Consistent watering, appropriate fertilization, and the use of mulch are crucial for maintaining a healthy and thriving flower garden."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Scenario-based questions on identifying and addressing watering issues."
+                },
+                {
+                  "_value": "Matching exercise: Students pair different types of fertilizers with their appropriate descriptions."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "This session will equip you with the knowledge and techniques to identify, prevent, and manage common garden pests and diseases."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Common Garden Pests:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Aphids:" }],
+                          "_value": "Describe these small, sap-sucking insects and their damaging effects. Discuss control methods like insecticidal soap or introducing beneficial insects like ladybugs."
+                        },
+                        {
+                          "strong": [{ "_value": "Slugs and Snails:" }],
+                          "_value": "Explain their feeding habits and the damage they cause. Cover control methods like beer traps, copper tape, and diatomaceous earth."
+                        },
+                        {
+                          "strong": [{ "_value": "Japanese Beetles:" }],
+                          "_value": "Describe these leaf-eating beetles and their destructive potential. Discuss handpicking, traps, and insecticide options."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Common Plant Diseases:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Powdery Mildew:" }],
+                          "_value": "Explain this fungal disease and its characteristic white powdery coating. Discuss preventative measures like ensuring good air circulation and using fungicides when necessary."
+                        },
+                        {
+                          "strong": [{ "_value": "Black Spot:" }],
+                          "_value": "Describe this fungal disease affecting roses, causing black spots on leaves. Cover control measures like removing infected leaves and using fungicides."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Integrated Pest Management (IPM):" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Introduction to IPM:" }],
+                          "_value": "Explain the principles of IPM, emphasizing a balanced approach that combines cultural, biological, and chemical control methods."
+                        },
+                        {
+                          "strong": [{ "_value": "Preventative Measures:" }],
+                          "_value": "Discuss cultural practices that can prevent pest and disease problems, like choosing resistant varieties, rotating crops, and providing optimal growing conditions."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Early detection, proactive measures, and an understanding of IPM principles are essential for effective pest and disease control."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Image-based identification of common garden pests."
+                },
+                {
+                  "_value": "Students develop an IPM strategy for a hypothetical pest problem in the garden."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "li": [
+        {
+          "strong": [{ "_value": "Introduction:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "This final session focuses on essential maintenance practices to keep your flower garden looking its best throughout the growing season."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Main Content:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "strong": [{ "_value": "Deadheading:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Explanation:" }],
+                          "_value": "Explain the process of removing spent flowers, encouraging more blooms and preventing self-seeding."
+                        },
+                        {
+                          "strong": [{ "_value": "Techniques:" }],
+                          "_value": "Demonstrate deadheading techniques for different types of flowers."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Pinching and Pruning:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Pinching:" }],
+                          "_value": "Explain how pinching back the tips of certain plants promotes bushier growth and more flowers."
+                        },
+                        {
+                          "strong": [{ "_value": "Pruning:" }],
+                          "_value": "Discuss the importance of pruning to remove dead or diseased branches, control size and shape, and rejuvenate plants."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Supporting Plants:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Staking:" }],
+                          "_value": "Demonstrate how to stake tall or floppy plants to prevent them from falling over."
+                        },
+                        {
+                          "strong": [{ "_value": "Trellising:" }],
+                          "_value": "Explain the use of trellises to support climbing plants, maximizing vertical space."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "strong": [{ "_value": "Winterizing Your Garden:" }],
+                  "ul": [
+                    {
+                      "li": [
+                        {
+                          "strong": [{ "_value": "Cleaning Up:" }],
+                          "_value": "Discuss the importance of removing debris and diseased plant material to prevent overwintering pests and diseases."
+                        },
+                        {
+                          "strong": [{ "_value": "Protecting Plants:" }],
+                          "_value": "Explain methods like mulching, covering delicate plants, or bringing potted plants indoors to protect them from frost damage."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strong": [{ "_value": "Key Points:" }],
+          "_value": "Regular maintenance practices like deadheading, pruning, and winterizing ensure the long-term health, beauty, and productivity of your flower garden."
+        },
+        {
+          "strong": [{ "_value": "Assessment:" }],
+          "ul": [
+            {
+              "li": [
+                {
+                  "_value": "Practical demonstration of deadheading and pinching techniques."
+                },
+                {
+                  "_value": "Students create a seasonal maintenance calendar for a flower garden, outlining key tasks for each month."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

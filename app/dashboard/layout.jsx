@@ -8,8 +8,9 @@ export const DashboardContext = createContext();
 
 function DashBoardLayout({ children }) {
   const [chatShow, setchatShow] = useState(false);
+  const [currentChat, setcurrentChat] = useState([]);
   return (
-    <DashboardContext.Provider value={{ chatShow, setchatShow }}> 
+    <DashboardContext.Provider value={{ chatShow, setchatShow, currentChat, setcurrentChat }}> 
     <div>
       <div className="md:w-64 hidden md:block">
         <SideBar />

@@ -31,8 +31,7 @@ function AddNewCourse() {
     'description': '',
     'difficulty': '',
     'duration': '',
-    'identifier': '', 
-  
+    'identifier': '',
   });
 
 
@@ -79,14 +78,13 @@ function AddNewCourse() {
         <h2
           className="font-bold text-lg text-center"
           onClick={() => {
-            toast.success('AI Course creation initiated. Please wait...')
             setOpenDialog(true)
           }}
         >
           + Create AI Course
         </h2>
       </div>
-      <Dialog open={openDialog}>
+      <Dialog open={openDialog} onOpenChange={setOpenDialog}>
         <DialogContent className="max-w-2xl">
           <DialogHeader >
             <DialogTitle className="text-2xl">Create Course</DialogTitle>

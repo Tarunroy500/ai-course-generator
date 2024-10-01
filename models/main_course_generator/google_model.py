@@ -18,7 +18,8 @@ class GoogleModel:
         try:
             vertexai.init(project=project_id, location=location)
             self.text_model = GenerativeModel("gemini-1.5-flash-001")
-            self.image_model = ImageGenerationModel.from_pretrained("imagen-3.0-generate-001")
+            self.image_model = ImageGenerationModel.from_pretrained("imagen-2.0-generate-001")
+            # self.image_model = ImageGenerationModel.from_pretrained("imagen-3.0-generate-001")
             self.fast_image_model = ImageGenerationModel.from_pretrained("imagen-3.0-fast-generate-001")
             logging.info("Google Vertex AI models initialized successfully.")
             self._initialized = True

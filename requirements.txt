@@ -1,0 +1,8 @@
+requests
+playsound
+Flask==2.0.2
+requests==2.26.0
+groq
+maerkdown
+html_to_json
+veretxai

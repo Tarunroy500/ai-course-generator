@@ -32,7 +32,7 @@ class MongoDBHandler(logging.Handler):
         )
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb+srv://CourseCreator:khOJyuy6rSdQGgrw@cluster0.8rvtn.mongodb.net/')
 db = client['course_database']
 project_collection = db['projects']
 

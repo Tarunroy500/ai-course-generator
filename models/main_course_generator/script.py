@@ -5,14 +5,40 @@ import markdown
 import html_to_json
 import shutil
 import base64
+from pymongo import MongoClient
 from google_model import GoogleModel
 from groq_model import GroqModel
 # from openai_model import OpenAIModel
 
+# Configure logging to write to a file
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='main_course/course_generator.log',
+    filemode='a'  # Append mode
+)
 
+class MongoDBHandler(logging.Handler):
+    def __init__(self, project_collection, project_id):
+        super().__init__()
+        self.project_collection = project_collection
+        self.project_id = project_id
+
+    def emit(self, record):
+        log_entry = self.format(record)
+        self.project_collection.update_one(
+            {"_id": self.project_id},
+            {"$push": {"logs": log_entry}}
+        )
+
+# Connect to MongoDB
+client = MongoClient('mongodb://localhost:27017/')
+db = client['course_database']
+project_collection = db['projects']
 
 class CourseGenerator:
-    def __init__(self, content, descriptions, type, language, duration, identifier, difficulty, text_provider, image_provider):
+    def __init__(self, user_id, content, descriptions, type, language, duration, identifier, difficulty, text_provider, image_provider):
+        self.user_id = user_id
         self.type = type
         self.content = content
         self.descriptions = descriptions
@@ -23,8 +49,32 @@ class CourseGenerator:
         self.text_provider = text_provider
         self.image_provider = image_provider
 
-    def generate_course(self):
+        # Initialize project document
+        self.project_id = project_collection.insert_one({
+            "user_id": user_id,
+            "content": content,
+            "descriptions": descriptions,
+            "type": type,
+            "language": language,
+            "duration": duration,
+            "identifier": identifier,
+            "difficulty": difficulty,
+            "text_provider": text_provider,
+            "image_provider": image_provider,
+            "course_content": None,
+            "images": [],
+            "logs": [],
+            "chat": []
+        }).inserted_id
 
+        # Add MongoDB logging handler
+        mongo_handler = MongoDBHandler(project_collection, self.project_id)
+        mongo_handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        mongo_handler.setFormatter(formatter)
+        logging.getLogger().addHandler(mongo_handler)
+
+    def generate_course(self):
         logging.info("Starting course generation process...")
 
         # Generate prompt
@@ -56,14 +106,12 @@ class CourseGenerator:
                 return
 
             # Save markdown
-            self.save_markdown(final_output)
+            self.save_markdown(jsonified)
             print(jsonified)
 
         except Exception as e:
             logging.exception(f"An unexpected error occurred: {e}")
 
-
-    
     def get_text_model(self):
         if self.text_provider == "google":
             return GoogleModel(os.environ.get("GOOGLE_CLOUD_PROJECT"))
@@ -73,7 +121,6 @@ class CourseGenerator:
         #     return OpenAIModel(os.environ.get("OPENAI_API_KEY"))
         else:
             raise ValueError("Unsupported text provider")
-        
 
     def get_image_model(self):
         if self.image_provider == "google":
@@ -84,7 +131,6 @@ class CourseGenerator:
         else:
             raise ValueError("Unsupported image provider")
 
-
     def generate_course_texts(self):
         logging.info("Generating course content using text model...")
         result = self.text_model.generate_text(self.prompt)
@@ -92,9 +138,6 @@ class CourseGenerator:
             logging.error("Failed to generate course content. Exiting.")
             return None
         return result
-
-
-    
 
     def generate_images(self, result):
         image_data = []
@@ -112,30 +155,34 @@ class CourseGenerator:
                     if image is None:
                         logging.error(f"Failed to generate image for prompt: '{image_prompt}'")
                         continue  # Skip to next iteration if image generation fails
-
+                    image = image._image_bytes
                     # Convert image to base64 string
                     image_base64 = base64.b64encode(image).decode('utf-8')
+
+                    # Store image in MongoDB
+                    image_id = project_collection.update_one(
+                        {"_id": self.project_id},
+                        {"$push": {"images": {"image_base64": image_base64, "prompt": image_prompt}}}
+                    )
+
                     image_data.append({"prompt": image_prompt, "image_base64": image_base64})
-                    logging.info(f"Image for prompt '{image_prompt}' generated successfully.")
+                    logging.info(f"Image for prompt '{image_prompt}' generated and stored successfully.")
 
                 except Exception as e:
                     logging.error(f"Error generating image for prompt '{image_prompt}': {e}")
 
         return result_list, image_data
 
-
-
     def assemble_markdown(self, result_list, image_data):
         logging.info("Assembling final markdown output...")
         final_output = ""
         for i, section in enumerate(result_list):
             final_output += section
-            if i < len(image_data):  # Add image if available for this section
-                final_output += f"![Generated Image](data:image/png;base64,{image_data[i]['image_base64']})\n"
+            if i < len(image_data):  # Add image placeholder if available for this section
+                final_output += f"![Generated Image Placeholder](IMAGE_PLACEHOLDER_{i})\n"
                 final_output += f"{image_data[i]['prompt']}\n"
         logging.info("Markdown output assembled successfully.")
         return final_output
-
 
     def convert_to_json(self, final_output):
         logging.info("Converting markdown to HTML and JSON...")
@@ -148,20 +195,24 @@ class CourseGenerator:
             logging.error(f"Error converting markdown to JSON: {e}")
             return None
 
-
     def save_markdown(self, final_output):
-        md_file_path = "main_course/temp.md"  # Simplified path for clarity
         try:
-            with open(md_file_path, "w", encoding="utf-8") as f:
-                f.write(final_output)
-            logging.info(f"Markdown output saved to {md_file_path} successfully.")
+            # Store course JSON in MongoDB
+            project_collection.update_one(
+                {"_id": self.project_id},
+                {"$set": {"course_content": final_output}}
+            )
+            logging.info(f"Course content saved to MongoDB with ID: {self.project_id}")
         except Exception as e:
-            logging.error(f"Error saving markdown output: {e}")
+            logging.error(f"Error saving course content to MongoDB: {e}")
 
-
-
-
-
+    def save_chat_record(self, chat_record):
+        try:
+            # Store chat record in MongoDB
+            chat_id = self.chat_collection.insert_one({"chat_record": chat_record}).inserted_id
+            logging.info(f"Chat record saved to MongoDB with ID: {chat_id}")
+        except Exception as e:
+            logging.error(f"Error saving chat record to MongoDB: {e}")
 
     # System roles
     CreationSysRole = """
@@ -235,26 +286,24 @@ class CourseGenerator:
             prompt += f'\n\n >>> SystemRole : {self.ChatSysRole}'
         return prompt
 
-
-
-
-
 if __name__ == "__main__":
     # Extract command-line arguments
     args = sys.argv
 
     # Assign values from command-line arguments, use default values if not provided
-    content = args[1] if len(args) > 1 else ''
-    descriptions = args[2] if len(args) > 2 else ''
-    type = int(args[3]) if len(args) > 3 else 1
-    language = args[4] if len(args) > 4 else 'English'
-    duration = int(args[5]) if len(args) > 5 else 1
-    identifier = args[6] if len(args) > 6 else 'Day'
-    difficulty = args[7] if len(args) > 7 else 'Beginner'
-    text_provider = args[8] if len(args) > 8 else 'groq'
-    image_provider = args[9] if len(args) > 9 else 'google'
+    user_id = args[1] if len(args) > 1 else '0001'
+    content = args[2] if len(args) > 2  else 'Machine Learning : Introduction'
+    descriptions = args[3] if len(args) > 3 else ''
+    type = int(args[4]) if len(args) > 4 else 1
+    language = args[5] if len(args) > 5 else 'English'
+    duration = int(args[6]) if len(args) > 6 else 1
+    identifier = args[7] if len(args) > 7 else 'Day'
+    difficulty = args[8] if len(args) > 8 else 'Beginner'
+    text_provider = args[9] if len(args) > 9 else 'google'
+    image_provider = args[10] if len(args) > 10 else 'google'
 
     course_generator = CourseGenerator(
+        user_id,
         content,
         descriptions,
         type,

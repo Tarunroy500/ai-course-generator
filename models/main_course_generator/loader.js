@@ -4,6 +4,7 @@ function getResponseFromAPI(data) {
     const pythonScriptPath = 'models/main_course_generator/script.py';
     
     // Ensure all values are properly assigned and avoid null values using the `||` operator
+    let userID = data.details?.id || '';
     let content = data.details?.title || '';
     let descriptions = data.details?.descriptions || '';
     let type = data.details?.type || 0;
@@ -15,6 +16,7 @@ function getResponseFromAPI(data) {
     // Construct the arguments array for the Python script
     const pythonArgs = [
         pythonScriptPath,  // The path to the Python script
+        userID,
         content,
         descriptions,
         type.toString(),  // Convert numbers to strings to ensure they are passed correctly

@@ -3,6 +3,6 @@ playsound
 Flask==2.0.2
 requests==2.26.0
 groq
-maerkdown
+markdown
 html_to_json
-veretxai
+vertexai

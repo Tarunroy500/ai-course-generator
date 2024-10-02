@@ -14,13 +14,20 @@ function ChapterContent() {
   useEffect(() => {
     async function getData(_id) {
       try {
-        const response = await axios.get('/api/data', {
-          _id: courseid
+        const response = await axios.post("/api/course", {
+          _id: _id
         }, {
-          
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          withCredentials: true,
         })
+
+        if(response.status === 200 || response.status === 201) {
+          setMarkdownContent(response.data.course_content);
+        }
       } catch (error) {
-        
+        console.log(error.message)
       }
     }
 

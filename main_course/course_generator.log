@@ -807,3 +807,270 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\u2248' in position 
 2024-10-01 23:59:24,590 - INFO - Converting markdown to HTML and JSON...
 2024-10-01 23:59:24,708 - INFO - Conversion to JSON successful.
 2024-10-01 23:59:24,861 - INFO - Course content saved to MongoDB with ID: 66fc3f637a49b10cdd25c126
+2024-10-02 10:37:58,502 - INFO - Starting course generation process...
+2024-10-02 10:37:58,564 - INFO - Generating content using CreationSysRole...
+2024-10-02 10:37:58,625 - INFO - Prompt created successfully.
+2024-10-02 10:38:04,025 - INFO - Google Vertex AI models initialized successfully.
+2024-10-02 10:38:04,087 - INFO - Generating course content using text model...
+2024-10-02 10:38:24,605 - INFO - Generating image for prompt: '* Description: A simple flowchart depicting the Marvel Universe and its major elements, such as different character groups, locations, and storylines.
+        * Prompt:  "Draw a flowchart showcasing the Marvel Universe, including the major elements like heroes, villains, storylines, and locations."
+        *'...
+2024-10-02 10:38:32,355 - ERROR - Error generating image: list index out of range
+2024-10-02 10:38:32,418 - ERROR - Failed to generate image for prompt: '* Description: A simple flowchart depicting the Marvel Universe and its major elements, such as different character groups, locations, and storylines.
+        * Prompt:  "Draw a flowchart showcasing the Marvel Universe, including the major elements like heroes, villains, storylines, and locations."
+        *'
+2024-10-02 10:38:32,483 - INFO - Generating image for prompt: '* Description: A Venn diagram depicting the overlap between different power categories, highlighting the interconnected nature of abilities.
+        * Prompt: "Draw a Venn Diagram showing the overlap between Physical Strength, Durability, Energy Manipulation, and Combat Prowess, showcasing how these categories interact and can influence each other."
+        *'...
+2024-10-02 10:38:38,823 - ERROR - Error generating image: list index out of range
+2024-10-02 10:38:38,885 - ERROR - Failed to generate image for prompt: '* Description: A Venn diagram depicting the overlap between different power categories, highlighting the interconnected nature of abilities.
+        * Prompt: "Draw a Venn Diagram showing the overlap between Physical Strength, Durability, Energy Manipulation, and Combat Prowess, showcasing how these categories interact and can influence each other."
+        *'
+2024-10-02 10:38:38,945 - INFO - Generating image for prompt: '* Description: A bar graph comparing the lifting capacity of different Marvel characters, such as Hulk, Thor, and Juggernaut.
+        * Prompt: "Draw a bar graph showcasing the lifting capacity of characters like Hulk, Thor, and Juggernaut, highlighting their relative strength."
+        *'...
+2024-10-02 10:38:55,356 - INFO - Image for prompt '* Description: A bar graph comparing the lifting capacity of different Marvel characters, such as Hulk, Thor, and Juggernaut.
+        * Prompt: "Draw a bar graph showcasing the lifting capacity of characters like Hulk, Thor, and Juggernaut, highlighting their relative strength."
+        *' generated and stored successfully.
+2024-10-02 10:38:55,425 - INFO - Generating image for prompt: '* Description: A pie chart representing the percentage of characters with different levels of durability, from low to high.
+        * Prompt: "Create a pie chart illustrating the distribution of Marvel characters based on their durability levels, from low to high."
+        *'...
+2024-10-02 10:39:05,571 - INFO - Image for prompt '* Description: A pie chart representing the percentage of characters with different levels of durability, from low to high.
+        * Prompt: "Create a pie chart illustrating the distribution of Marvel characters based on their durability levels, from low to high."
+        *' generated and stored successfully.
+2024-10-02 10:39:05,688 - INFO - Generating image for prompt: '* Description: A table showcasing different energy manipulation abilities, listing the types of energy, their source, and the effects they have.
+        * Prompt: "Create a table illustrating various energy manipulation abilities, including the type of energy, its source, and its effect on the environment or targets."
+        *'...
+2024-10-02 10:39:16,821 - INFO - Image for prompt '* Description: A table showcasing different energy manipulation abilities, listing the types of energy, their source, and the effects they have.
+        * Prompt: "Create a table illustrating various energy manipulation abilities, including the type of energy, its source, and its effect on the environment or targets."
+        *' generated and stored successfully.
+2024-10-02 10:39:16,965 - INFO - Generating image for prompt: '* Description: A graphic showing a fight scene, highlighting the interplay between agility, strategy, and martial arts skills.
+        * Prompt: "Draw a fight scene showcasing the use of agility, strategy, and martial arts skills by characters like Black Panther and Daredevil."
+        *'...
+2024-10-02 10:39:28,465 - INFO - Image for prompt '* Description: A graphic showing a fight scene, highlighting the interplay between agility, strategy, and martial arts skills.
+        * Prompt: "Draw a fight scene showcasing the use of agility, strategy, and martial arts skills by characters like Black Panther and Daredevil."
+        *' generated and stored successfully.
+2024-10-02 10:39:28,645 - INFO - Generating image for prompt: '* Description: A mind map showcasing different mental abilities, their applications, and their impact on the Marvel Universe.
+        * Prompt: "Create a mind map illustrating various mental abilities like telepathy, telekinesis, and psionic powers, including their uses and their effects on the Marvel Universe."
+        *'...
+2024-10-02 10:39:40,888 - ERROR - Error generating image for prompt '* Description: A mind map showcasing different mental abilities, their applications, and their impact on the Marvel Universe.
+        * Prompt: "Create a mind map illustrating various mental abilities like telepathy, telekinesis, and psionic powers, including their uses and their effects on the Marvel Universe."
+        *': BSONObj size: 19633390 (0x12B94EE) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd52db6f5c97001cab992'), full error: {'index': 0, 'code': 10334, 'errmsg': "BSONObj size: 19633390 (0x12B94EE) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd52db6f5c97001cab992')"}
+2024-10-02 10:39:41,010 - INFO - Generating image for prompt: '* Description: A diagram showing examples of different technological augmentations and their applications, from cybernetics to bio-engineering.
+        * Prompt: "Create a diagram showcasing examples of technological augmentations, including cybernetics, bio-engineering, and weapons, with their respective applications and effects."
+        *'...
+2024-10-02 10:39:41,646 - ERROR - Error generating image: 400 Image generation failed with the following error: The response is blocked, as it may violate our policies. If you believe this is an error, please send feedback to your account team. Error Code: 42876398
+2024-10-02 10:39:41,762 - ERROR - Failed to generate image for prompt: '* Description: A diagram showing examples of different technological augmentations and their applications, from cybernetics to bio-engineering.
+        * Prompt: "Create a diagram showcasing examples of technological augmentations, including cybernetics, bio-engineering, and weapons, with their respective applications and effects."
+        *'
+2024-10-02 10:39:41,880 - INFO - Generating image for prompt: '* Description: A chart showcasing a ranking system based on various criteria, including power categories, strategic advantage, and impact on the Marvel Universe.
+        * Prompt: "Create a chart outlining a ranking system for evaluating Marvel characters based on factors like power categories, strategic advantage, and influence on the Marvel Universe."
+        *'...
+2024-10-02 10:39:54,125 - ERROR - Error generating image for prompt '* Description: A chart showcasing a ranking system based on various criteria, including power categories, strategic advantage, and impact on the Marvel Universe.
+        * Prompt: "Create a chart outlining a ranking system for evaluating Marvel characters based on factors like power categories, strategic advantage, and influence on the Marvel Universe."
+        *': BSONObj size: 21367864 (0x1460C38) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd52db6f5c97001cab992'), full error: {'index': 0, 'code': 10334, 'errmsg': "BSONObj size: 21367864 (0x1460C38) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd52db6f5c97001cab992')"}
+2024-10-02 10:39:54,240 - INFO - Assembling final markdown output...
+2024-10-02 10:39:54,353 - INFO - Markdown output assembled successfully.
+2024-10-02 10:39:54,462 - INFO - Converting markdown to HTML and JSON...
+2024-10-02 10:39:54,614 - INFO - Conversion to JSON successful.
+2024-10-02 10:39:54,880 - INFO - Course content saved to MongoDB with ID: 66fcd52db6f5c97001cab992
+2024-10-02 10:40:36,423 - INFO - Starting course generation process...
+2024-10-02 10:40:36,488 - INFO - Generating content using CreationSysRole...
+2024-10-02 10:40:36,553 - INFO - Prompt created successfully.
+2024-10-02 10:40:41,310 - INFO - Google Vertex AI models initialized successfully.
+2024-10-02 10:40:41,373 - INFO - Generating course content using text model...
+2024-10-02 10:40:52,577 - INFO - Generating image for prompt: '**Description:** A simple flowchart depicting the basic process of AI. It shows data being fed into an AI model, which then processes the information and outputs predictions or decisions.
+
+**Prompt:** A flowchart showing the basic process of AI, with arrows and boxes representing data input, model processing, and output.'...
+2024-10-02 10:41:04,646 - INFO - Image for prompt '**Description:** A simple flowchart depicting the basic process of AI. It shows data being fed into an AI model, which then processes the information and outputs predictions or decisions.
+
+**Prompt:** A flowchart showing the basic process of AI, with arrows and boxes representing data input, model processing, and output.' generated and stored successfully.
+2024-10-02 10:41:04,716 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the different applications of AI in healthcare, with icons representing diagnosis, treatment, patient care, and research.
+
+**Prompt:** A diagram showing different applications of AI in healthcare, with icons for medical imaging analysis, drug discovery, virtual assistants, and medical research.'...
+2024-10-02 10:41:10,854 - ERROR - Error generating image: list index out of range
+2024-10-02 10:41:10,929 - ERROR - Failed to generate image for prompt: '**Description:** A diagram illustrating the different applications of AI in healthcare, with icons representing diagnosis, treatment, patient care, and research.
+
+**Prompt:** A diagram showing different applications of AI in healthcare, with icons for medical imaging analysis, drug discovery, virtual assistants, and medical research.'
+2024-10-02 10:41:11,003 - INFO - Generating image for prompt: '**Description:** A diagram illustrating the ethical considerations in AI medicine, with icons representing bias, privacy, transparency, and regulation.
+
+**Prompt:** A diagram with icons representing bias, privacy, transparency, and regulation, highlighting the ethical challenges in AI medicine.'...
+2024-10-02 10:41:22,081 - ERROR - Error generating image: list index out of range
+2024-10-02 10:41:22,155 - ERROR - Failed to generate image for prompt: '**Description:** A diagram illustrating the ethical considerations in AI medicine, with icons representing bias, privacy, transparency, and regulation.
+
+**Prompt:** A diagram with icons representing bias, privacy, transparency, and regulation, highlighting the ethical challenges in AI medicine.'
+2024-10-02 10:41:22,229 - INFO - Assembling final markdown output...
+2024-10-02 10:41:22,302 - INFO - Markdown output assembled successfully.
+2024-10-02 10:41:22,376 - INFO - Converting markdown to HTML and JSON...
+2024-10-02 10:41:22,469 - INFO - Conversion to JSON successful.
+2024-10-02 10:41:22,627 - INFO - Course content saved to MongoDB with ID: 66fcd5cb1e55994600f86f29
+2024-10-02 10:44:10,323 - INFO - Starting course generation process...
+2024-10-02 10:44:10,383 - INFO - Generating content using CreationSysRole...
+2024-10-02 10:44:10,442 - INFO - Prompt created successfully.
+2024-10-02 10:44:15,270 - INFO - Google Vertex AI models initialized successfully.
+2024-10-02 10:44:15,329 - INFO - Generating course content using text model...
+2024-10-02 10:44:53,379 - ERROR - Error generating text: Cannot get the response text.
+Cannot get the Candidate text.
+Response candidate content has no parts (and thus no text). The candidate is likely blocked by the safety filters.
+Content:
+{}
+Candidate:
+{
+  "finish_reason": "RECITATION",
+  "safety_ratings": [
+    {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.06738281,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.09033203
+    },
+    {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.06640625,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.14550781
+    },
+    {
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.111328125,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.07714844
+    },
+    {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "probability": "NEGLIGIBLE",
+      "probability_score": 0.111328125,
+      "severity": "HARM_SEVERITY_NEGLIGIBLE",
+      "severity_score": 0.171875
+    }
+  ],
+  "citation_metadata": {
+    "citations": [
+      {
+        "start_index": 2746,
+        "end_index": 2903,
+        "uri": "https://www.askhandle.com/blog/how-does-FIFA-game-computer-player-work"
+      },
+      {
+        "start_index": 34136,
+        "end_index": 34263,
+        "uri": "https://gameishard.gg/news/vr-headset-to-self-terminate-as-users-wait-for-update-to-destroy-device/95022/"
+      }
+    ]
+  },
+  "avg_logprobs": "NaN"
+}
+Response:
+{
+  "candidates": [
+    {
+      "finish_reason": "RECITATION",
+      "safety_ratings": [
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.06738281,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.09033203
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.06640625,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.14550781
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.111328125,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.07714844
+        },
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE",
+          "probability_score": 0.111328125,
+          "severity": "HARM_SEVERITY_NEGLIGIBLE",
+          "severity_score": 0.171875
+        }
+      ],
+      "citation_metadata": {
+        "citations": [
+          {
+            "start_index": 2746,
+            "end_index": 2903,
+            "uri": "https://www.askhandle.com/blog/how-does-FIFA-game-computer-player-work"
+          },
+          {
+            "start_index": 34136,
+            "end_index": 34263,
+            "uri": "https://gameishard.gg/news/vr-headset-to-self-terminate-as-users-wait-for-update-to-destroy-device/95022/"
+          }
+        ]
+      },
+      "avg_logprobs": "NaN"
+    }
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 1289,
+    "total_token_count": 1289
+  }
+}
+2024-10-02 10:44:53,441 - ERROR - Failed to generate course content. Exiting.
+2024-10-02 10:45:59,590 - INFO - Starting course generation process...
+2024-10-02 10:45:59,648 - INFO - Generating content using CreationSysRole...
+2024-10-02 10:45:59,706 - INFO - Prompt created successfully.
+2024-10-02 10:46:04,409 - INFO - Google Vertex AI models initialized successfully.
+2024-10-02 10:46:04,467 - INFO - Generating course content using text model...
+2024-10-02 10:46:26,275 - INFO - Generating image for prompt: '**Description:**  A diagram showing the architecture of a typical LLM, highlighting its components: Input layer, Hidden layers, Output layer, and the training process using a large text corpus.
+
+**Prompt:** Diagram depicting the architecture of a Large Language Model, showcasing the input layer, hidden layers, output layer, and the training process using a large text corpus.'...
+2024-10-02 10:46:34,133 - ERROR - Error generating image: list index out of range
+2024-10-02 10:46:34,193 - ERROR - Failed to generate image for prompt: '**Description:**  A diagram showing the architecture of a typical LLM, highlighting its components: Input layer, Hidden layers, Output layer, and the training process using a large text corpus.
+
+**Prompt:** Diagram depicting the architecture of a Large Language Model, showcasing the input layer, hidden layers, output layer, and the training process using a large text corpus.'
+2024-10-02 10:46:34,252 - INFO - Generating image for prompt: '**Description:**  A simplified illustration showing the tokenization process, where a sentence is broken down into individual tokens.
+
+**Prompt:** A diagram depicting the process of tokenization, where a sentence is broken down into individual tokens, highlighting the separation of words, punctuation, and special symbols.'...
+2024-10-02 10:46:46,655 - INFO - Image for prompt '**Description:**  A simplified illustration showing the tokenization process, where a sentence is broken down into individual tokens.
+
+**Prompt:** A diagram depicting the process of tokenization, where a sentence is broken down into individual tokens, highlighting the separation of words, punctuation, and special symbols.' generated and stored successfully.
+2024-10-02 10:46:46,725 - INFO - Generating image for prompt: '**Description:**  A chart categorizing different types of LLMs (Generative, Conversational, Multi-Modal) and listing their key characteristics.
+
+**Prompt:** A chart categorizing different types of Large Language Models, including Generative LLMs, Conversational LLMs, and Multi-Modal LLMs, highlighting their key features and capabilities.'...
+2024-10-02 10:46:58,701 - INFO - Image for prompt '**Description:**  A chart categorizing different types of LLMs (Generative, Conversational, Multi-Modal) and listing their key characteristics.
+
+**Prompt:** A chart categorizing different types of Large Language Models, including Generative LLMs, Conversational LLMs, and Multi-Modal LLMs, highlighting their key features and capabilities.' generated and stored successfully.
+2024-10-02 10:46:58,858 - INFO - Generating image for prompt: '**Description:**  A diagram showing the relationship between NLP and LLMs, where NLP techniques are used as building blocks for LLM development and applications.
+
+**Prompt:** A diagram depicting the relationship between Natural Language Processing (NLP) and Large Language Models (LLMs), highlighting how NLP techniques are integrated into LLM development and applications.'...
+2024-10-02 10:47:09,517 - INFO - Image for prompt '**Description:**  A diagram showing the relationship between NLP and LLMs, where NLP techniques are used as building blocks for LLM development and applications.
+
+**Prompt:** A diagram depicting the relationship between Natural Language Processing (NLP) and Large Language Models (LLMs), highlighting how NLP techniques are integrated into LLM development and applications.' generated and stored successfully.
+2024-10-02 10:47:09,655 - INFO - Generating image for prompt: '**Description:**  A diagram showing the relationship between NLP and LLMs, where NLP techniques are used as building blocks for LLM development and applications.
+
+**Prompt:** A diagram depicting the relationship between Natural Language Processing (NLP) and Large Language Models (LLMs), highlighting how NLP techniques are integrated into LLM development and applications.'...
+2024-10-02 10:47:24,594 - INFO - Image for prompt '**Description:**  A diagram showing the relationship between NLP and LLMs, where NLP techniques are used as building blocks for LLM development and applications.
+
+**Prompt:** A diagram depicting the relationship between Natural Language Processing (NLP) and Large Language Models (LLMs), highlighting how NLP techniques are integrated into LLM development and applications.' generated and stored successfully.
+2024-10-02 10:47:24,783 - INFO - Generating image for prompt: '**Description:**  A diagram showing the steps involved in tokenization, stemming, and lemmatization, illustrating how text is processed for NLP tasks.
+
+**Prompt:** A diagram depicting the processes of tokenization, stemming, and lemmatization, showcasing how text is broken down into individual units, reduced to root forms, and converted to dictionary forms, respectively.'...
+2024-10-02 10:47:34,804 - ERROR - Error generating image for prompt '**Description:**  A diagram showing the steps involved in tokenization, stemming, and lemmatization, illustrating how text is processed for NLP tasks.
+
+**Prompt:** A diagram depicting the processes of tokenization, stemming, and lemmatization, showcasing how text is broken down into individual units, reduced to root forms, and converted to dictionary forms, respectively.': BSONObj size: 19220210 (0x12546F2) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd70f7d652e16b586c21b'), full error: {'index': 0, 'code': 10334, 'errmsg': "BSONObj size: 19220210 (0x12546F2) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd70f7d652e16b586c21b')"}
+2024-10-02 10:47:34,915 - INFO - Generating image for prompt: '**Description:**  A visual representation of word embeddings, showing words as points in a multi-dimensional space, where similar words are closer to each other.
+
+**Prompt:** A diagram depicting word embeddings, showcasing words as points in a multi-dimensional space, with similar words clustered together based on their semantic relationships.'...
+2024-10-02 10:47:46,028 - ERROR - Error generating image for prompt '**Description:**  A visual representation of word embeddings, showing words as points in a multi-dimensional space, where similar words are closer to each other.
+
+**Prompt:** A diagram depicting word embeddings, showcasing words as points in a multi-dimensional space, with similar words clustered together based on their semantic relationships.': BSONObj size: 20798226 (0x13D5B12) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd70f7d652e16b586c21b'), full error: {'index': 0, 'code': 10334, 'errmsg': "BSONObj size: 20798226 (0x13D5B12) is invalid. Size must be between 0 and 16793600(16MB) First element: _id: ObjectId('66fcd70f7d652e16b586c21b')"}
+2024-10-02 10:47:46,138 - INFO - Assembling final markdown output...
+2024-10-02 10:47:46,246 - INFO - Markdown output assembled successfully.
+2024-10-02 10:47:46,356 - INFO - Converting markdown to HTML and JSON...
+2024-10-02 10:47:46,516 - INFO - Conversion to JSON successful.
+2024-10-02 10:47:46,789 - INFO - Course content saved to MongoDB with ID: 66fcd70f7d652e16b586c21b

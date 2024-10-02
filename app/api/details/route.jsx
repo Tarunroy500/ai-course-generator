@@ -9,7 +9,7 @@ export async function POST(request) {
     // Log or process the data (e.g., save to a database)
     console.log('Received data:', data);
 
-    let response = getResponseFromAPI(data)
+    let response = await getResponseFromAPI(data)
     console.log(`>>> Json Formatted Response from API : \n\n ${response}`)
 
 

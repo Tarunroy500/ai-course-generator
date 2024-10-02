@@ -11,7 +11,7 @@ function StartCourse({params}) {
   return (
     <div>
     <Header onBack={() => router.push("/dashboard")} />
-    <div className="flex">
+    <div className="flex mt-20">
       <div className="fixed md:w-72 hidden md:block h-screen border-t border-r bg-white shadow-md">
         <h2 className="font-semibold text-2xl p-4 border-b text-blue-600 border-gray-300">
           Course Name
@@ -23,7 +23,7 @@ function StartCourse({params}) {
           
         </div>
       </div>
-      <div className="md:ml-72">
+      <div className="md:ml-72 max-h-[88vh] overflow-y-auto py-5">
         <ChapterContent />
       </div>
     </div>

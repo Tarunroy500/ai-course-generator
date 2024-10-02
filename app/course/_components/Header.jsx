@@ -23,7 +23,7 @@ import React from 'react'
 
 function Header({ onBack }) {
   return (
-    <div className='flex justify-between items-center p-5 shadow-sm'>
+    <div className='flex justify-between items-center p-5 shadow-md fixed top-0 left-0 right-0 bg-white z-50'>
         <button
           className="bg-white text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100 transition"
           onClick={onBack}

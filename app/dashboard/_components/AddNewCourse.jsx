@@ -32,6 +32,7 @@ function AddNewCourse() {
     'difficulty': '',
     'duration': '',
     'identifier': '',
+    'type': 0
   });
 
 
@@ -55,7 +56,7 @@ function AddNewCourse() {
         headers: {
           'Content-Type': 'application/json'
         },
-        timeout: 120000, // Set a timeout of 10 seconds (10000 milliseconds) or adjust as needed
+        timeout: 120000, // Set a timeout of 120 seconds (120000 milliseconds) or adjust as needed
         withCredentials: true,
       });
 

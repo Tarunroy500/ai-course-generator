@@ -6,6 +6,7 @@ import axios from "axios";
 
 function ChapterContent() {
   const [MarkdownContent, setMarkdownContent] = useState("");
+  const [loading, setloading] = useState(false);
 
   const params = useParams();
   const { courseid } = params;
@@ -24,7 +25,7 @@ function ChapterContent() {
         })
 
         if(response.status === 200 || response.status === 201) {
-          setMarkdownContent(response.data.course_content);
+          setMarkdownContent(response.data.course);
         }
       } catch (error) {
         console.log(error.message)
@@ -34,9 +35,14 @@ function ChapterContent() {
     getData(courseid);
   }, []);
 
+  console.log(MarkdownContent)
+
   return (
     <div className="px-10 bg-white rounded-lg max-w-screen mx-auto overflow-y-auto">
-      <MarkdownRenderer MarkdownContent={MarkdownContent} />
+      {
+        loading ? <div className="text-9xl font-bold">Loading............</div> :
+        <MarkdownRenderer MarkdownContent={MarkdownContent} />
+      }
     </div>
   );
 }

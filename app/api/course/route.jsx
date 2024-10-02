@@ -1,14 +1,18 @@
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import Course from "@/app/mongo/model/Course";
+import { MongoClient, ObjectId } from "mongodb";
 
 export async function POST(request) {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    const client = new MongoClient(process.env.MONGODB_URI);
+    // await mongoose.connect(process.env.MONGODB_URI);
+    await client.connect();
+    const database = client.db("course_database")
+    const collection = database.collection("projects")
 
     const data = await request.json();
     console.log("Received data:", data._id);
-    const id = String(data._id);
 
     if (!data._id) {
       return NextResponse.json(
@@ -17,7 +21,7 @@ export async function POST(request) {
       );
     }
 
-    const course = await Course.findById(id);
+    const course = await collection.findOne({_id: new ObjectId(data._id)})
     console.log(course);
 
     if (!course) {
@@ -27,10 +31,10 @@ export async function POST(request) {
       );
     }
 
-    console.log("Course data:", course);
+    console.log("Course data:", course.course_content);
 
     return NextResponse.json(
-      { message: "Search Successful", course: course },
+      { message: "Search Successful", course: course.course_content },
       { status: 200 }
     );
   } catch (error) {

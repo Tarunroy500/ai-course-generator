@@ -2,6 +2,7 @@ import React from "react";
 
 const formatTextToHTML = (text) => {
   let formattedText = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  formattedText = formattedText.replace(/```(.*?)```/g, "<code>$1</code>");
 
   const lines = formattedText.split("\n");
   const listItems = lines.map((line) => {

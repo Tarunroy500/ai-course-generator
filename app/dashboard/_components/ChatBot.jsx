@@ -9,14 +9,17 @@ const ChatBot = () => {
 
   useEffect(() => {
     if (chatRef.current) {
-      chatRef.current.scrollBottom = chatRef.current.scrollHeight;
+      chatRef.current.scrollTo({
+        top: chatRef.current.scrollHeight,
+        behavior: 'smooth', // Makes scrolling smooth
+      });
     }
-  }, []);
+  });
 
   return (
     <div className='h-full w-full shadow-md max-w-[30vw]'>
       <ChatNavbar />
-      <div ref={chatRef} className='h-[90%] overflow-y-auto'>
+      <div ref={chatRef} className='h-[94%] overflow-y-auto'>
       <Chat />
       <ChatBotInput />
       </div>

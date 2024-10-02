@@ -1,0 +1,22 @@
+.markdown-content h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.markdown-content p {
+  line-height: 1.6;
+}
+
+.markdown-content a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.markdown-content ul {
+    list-style-type: disc; /* Display bullet points */
+    margin-left: 20px;
+  }
+  
+.markdown-content li {
+    margin-bottom: 10px; /* Add space between list items */
+  }

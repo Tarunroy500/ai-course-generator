@@ -28,6 +28,16 @@ body {
   margin-bottom: 10px; /* Add space between list items */
 }
 
+code {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+}
+
+
 /* p {
   margin: 10px 0;
 } */

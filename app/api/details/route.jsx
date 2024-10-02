@@ -13,7 +13,10 @@ export async function POST(request) {
 
     if (data.details?.type == 0) {
 
-      let [projectId, courseData] = response.split('\n')
+      let split_list = response.split('\n')
+      let projectId = split_list[0]
+      let courseData = split_list.slice(1).join('\n')
+
 
       console.log(`>>> Project ID: ${projectId}`)
       console.log(`>>> Json Formatted Response from API : \n\n ${courseData}`)

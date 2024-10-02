@@ -74,19 +74,28 @@ class CourseGenerator:
         mongo_handler.setFormatter(formatter)
         logging.getLogger().addHandler(mongo_handler)
 
-    def generate_course(self):
-        logging.info("Starting course generation process...")
 
-        if self.type == 1:
-            # Store User message in MongoDB
-            chat_id = project_collection.update_one(
-                {"_id": self.project_id},
-                {"$push": {"chat": {"from_system": False, "message": self.content}}}
-            )     
+    def start(self):
+        if self.type == 0:
+            self.generate_course()
+        elif self.type == 1:
+            self.generate_chat_messages()
+        elif self.type == 2:
+            self.handle_translation()
+        elif self.type == 3:
+            self.handle_speech_to_text()
+        elif self.type == 4:
+            self.handle_text_to_speech()
+        else:
+            logging.error(f"Invalid type value: {self.type}")
+
+
+    def generate_course(self):
+        logging.info("Starting course generation process...")  
 
         # Generate prompt
         self.prompt = self.generate_prompt()
-        logging.info("Prompt created successfully.")
+        logging.info("Course Creation Prompt created successfully.")
 
         try:
             self.text_model = self.get_text_model()
@@ -97,23 +106,10 @@ class CourseGenerator:
 
         try:
             # Generate course content
-            self.result = self.generate_course_texts()
+            self.result = self.generate_texts()
             if self.result is None:
-                return
-            
-            # When self.type == 1, we will return the result as it is.
-            # We will not save the content to markdown  and json, just feed it to the webpage.
-            # This is because, we need to show the content to the user as it is, no modifications.
-            # This is the chat system.
-            # We will not generate images in chat system.
-            # Chat messages will be saved to MongoDB.
-            if self.type == 1:
-                print(self.result)
-                    # Store system message in MongoDB
-                chat_id = project_collection.update_one(
-                    {"_id": self.project_id},
-                    {"$push": {"chat": {"from_system": True, "message": self.result}}}
-                )                
+                print("Failed to generate course content. Exiting.")
+                logging.error("Failed to generate course content. Exiting.")
                 return
 
             # Generate images
@@ -122,17 +118,65 @@ class CourseGenerator:
             # Assemble markdown
             final_output = self.assemble_markdown(result_list, image_data)
 
-            # Convert to JSON
-            jsonified = self.convert_to_json(final_output)
-            if jsonified is None:
-                return
+            # # Convert to JSON
+            # jsonified = self.convert_to_json(final_output)
+            # if jsonified is None:
+            #     return
 
             # Save markdown
-            self.save_markdown(jsonified)
-            print(jsonified)
+            self.save_markdown(final_output)
+            print(final_output)
 
         except Exception as e:
             logging.exception(f"An unexpected error occurred: {e}")
+
+
+    def generate_chat_messages(self):
+        logging.info("Starting chat message generation process...")
+        # Store User message in MongoDB
+        chat_id = project_collection.update_one(
+            {"_id": self.project_id},
+            {"$push": {"chat": {"from_system": False, "message": self.content}}}
+        )
+
+        # Generate prompt
+        self.prompt = self.generate_prompt()
+        logging.info("Chat Message Prompt created successfully.")
+
+        try:
+            self.text_model = self.get_text_model()
+        except Exception as e:
+            logging.error(f"Error getting text model: {e}")
+            return
+
+        try:
+            self.sys_message = self.generate_texts()
+        except Exception as e:
+            logging.error(f"Error generating chat messages: {e}")
+            return
+
+
+        print(self.sys_message)
+        logging.info("Chat message generation process completed.")
+        # Store system message in MongoDB
+        chat_id = project_collection.update_one(
+            {"_id": self.project_id},
+            {"$push": {"chat": {"from_system": True, "message": self.sys_message}}}
+        )                
+        return
+
+
+    def handle_translation(self):
+        pass
+
+
+    def handle_speech_to_text(self):
+        pass
+
+
+    def handle_text_to_speech(self):
+        pass
+
 
     def get_text_model(self):
         if self.text_provider == "google":
@@ -144,6 +188,7 @@ class CourseGenerator:
         else:
             raise ValueError("Unsupported text provider")
 
+
     def get_image_model(self):
         if self.image_provider == "google":
             return GoogleModel(os.environ.get("GOOGLE_CLOUD_PROJECT"))
@@ -153,13 +198,15 @@ class CourseGenerator:
         else:
             raise ValueError("Unsupported image provider")
 
-    def generate_course_texts(self):
+
+    def generate_texts(self):
         logging.info("Generating course content using text model...")
         result = self.text_model.generate_text(self.prompt)
         if result is None:
             logging.error("Failed to generate course content. Exiting.")
             return None
         return result
+
 
     def generate_images(self, result):
         image_data = []
@@ -195,6 +242,7 @@ class CourseGenerator:
 
         return result_list, image_data
 
+
     def assemble_markdown(self, result_list, image_data):
         logging.info("Assembling final markdown output...")
         final_output = ""
@@ -204,7 +252,14 @@ class CourseGenerator:
                 final_output += f"![Generated Image Placeholder](IMAGE_PLACEHOLDER_{i})\n"
                 final_output += f"{image_data[i]['prompt']}\n"
         logging.info("Markdown output assembled successfully.")
+        
+        # save asseme markdown in temp.md
+        with open('temp.md', 'w') as file:
+            file.write(final_output)
+            
+        self.save_markdown(final_output)
         return final_output
+
 
     def convert_to_json(self, final_output):
         logging.info("Converting markdown to HTML and JSON...")
@@ -217,6 +272,7 @@ class CourseGenerator:
             logging.error(f"Error converting markdown to JSON: {e}")
             return None
 
+
     def save_markdown(self, final_output):
         try:
             # Store course JSON in MongoDB
@@ -224,12 +280,13 @@ class CourseGenerator:
                 {"_id": self.project_id},
                 {"$set": {"course_content": final_output}}
             )
-
             
             logging.info(f"Course content saved to MongoDB with ID: {self.project_id}")
             print(self.project_id) # For sending the course id  to the user
+            print(self.final_output)
         except Exception as e:
             logging.error(f"Error saving course content to MongoDB: {e}")
+
 
     def save_chat_record(self, chat_record):
         try:
@@ -238,6 +295,7 @@ class CourseGenerator:
             logging.info(f"Chat record saved to MongoDB with ID: {chat_id}")
         except Exception as e:
             logging.error(f"Error saving chat record to MongoDB: {e}")
+
 
     # System roles
     CreationSysRole = """
@@ -342,12 +400,12 @@ if __name__ == "__main__":
     user_id = args[1] if len(args) > 1 else '0001'
     content = args[2] if len(args) > 2  else 'Machine Learning : Introduction'
     descriptions = args[3] if len(args) > 3 else ''
-    type = int(args[4]) if len(args) > 4 else 1
+    type = int(args[4]) if len(args) > 4 else 0
     language = args[5] if len(args) > 5 else 'English'
     duration = int(args[6]) if len(args) > 6 else 1
     identifier = args[7] if len(args) > 7 else 'Day'
     difficulty = args[8] if len(args) > 8 else 'Beginner'
-    text_provider = args[9] if len(args) > 9 else 'google'
+    text_provider = args[9] if len(args) > 9 else 'groq'
     image_provider = args[10] if len(args) > 10 else 'google'
 
     course_generator = CourseGenerator(
@@ -363,4 +421,4 @@ if __name__ == "__main__":
         image_provider
     )
 
-    course_generator.generate_course()
+    course_generator.start()

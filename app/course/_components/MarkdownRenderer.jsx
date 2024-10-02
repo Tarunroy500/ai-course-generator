@@ -5,13 +5,13 @@ import html from 'remark-html';
 import DOMPurify from 'dompurify';
 import '../[courseid]/course.css'
 
-const MarkdownRenderer = ({ markdownContent }) => {
+const MarkdownRenderer = ({ MarkdownContent }) => {
   const [htmlContent, setHtmlContent] = useState('');
 
   useEffect(() => {
     const processMarkdown = async () => {
       try {
-        const processedContent = await remark().use(html).process(markdownContent);
+        const processedContent = await remark().use(html).process(MarkdownContent);
         const sanitizedContent = DOMPurify.sanitize(processedContent.toString());
         setHtmlContent(sanitizedContent);
         console.log(sanitizedContent);
@@ -21,10 +21,10 @@ const MarkdownRenderer = ({ markdownContent }) => {
     };
 
     processMarkdown();
-  }, [markdownContent]);
+  }, [MarkdownContent]);
 
   return (
-    <div className="markdown-content" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <div className="markdown-content overflow-y-auto" dangerouslySetInnerHTML={{ __html: htmlContent }} />
   );
 };
 

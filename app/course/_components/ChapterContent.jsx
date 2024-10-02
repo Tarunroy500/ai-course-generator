@@ -1,32 +1,37 @@
-import React from 'react'
-import MarkdownRenderer from './MarkdownRenderer';
+"use client";
+import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import MarkdownRenderer from "./MarkdownRenderer";
+import axios from "axios";
 
 function ChapterContent() {
+  const [MarkdownContent, setMarkdownContent] = useState("");
 
-  const markdownContent = `
-  # Hello World
-  This is some **Markdown** content.
-  
-  ## Features
-  - Feature 1
-  - Feature 2
+  const params = useParams();
+  const { courseid } = params;
+  console.log(courseid);
 
-  [Visit Google](https://www.google.com)
-  `;
+  useEffect(() => {
+    async function getData(_id) {
+      try {
+        const response = await axios.get('/api/data', {
+          _id: courseid
+        }, {
+          
+        })
+      } catch (error) {
+        
+      }
+    }
+
+    getData(courseid);
+  }, []);
 
   return (
-    <div className='p-10 bg-white  rounded-lg max-w-4xl mx-auto my-8'>
-      <h2 className='font-bold text-3xl text-blue-600 mb-4'>
-        Chapter Name
-      </h2>
-      <p className='text-gray-700 leading-relaxed text-lg'>
-        This is a detailed description of the chapter. The content can go into
-        more depth, explaining the key points, and giving the reader an overview
-        of what they will learn in this chapter. Make it engaging and concise.
-      </p>
-      <MarkdownRenderer markdownContent={markdownContent}/>
+    <div className="px-10 bg-white rounded-lg max-w-screen mx-auto overflow-y-auto">
+      <MarkdownRenderer MarkdownContent={MarkdownContent} />
     </div>
-  )
+  );
 }
 
 export default ChapterContent;

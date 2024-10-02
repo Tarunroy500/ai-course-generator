@@ -194,4 +194,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or support, please contact [adityaraj.anshukumar50@gmail.com, surajkumarvadivel18@gmail.com].
+For any inquiries or support, please contact [tarunroy500@gmail.com, adityaraj.anshukumar50@gmail.com, vsurajk7@gmail.com, utkarshanandani9@gmail.com].

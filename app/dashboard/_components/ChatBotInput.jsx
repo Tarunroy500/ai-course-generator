@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import { IoSend } from "react-icons/io5";
 import { DashboardContext } from '../layout';
 import { LoaderCircle } from "lucide-react";
+import { FaMicrophone } from "react-icons/fa6";
 import axios from 'axios';
 
 const ChatBotInput = () => {
@@ -47,7 +48,10 @@ const ChatBotInput = () => {
         <input value={Input} onChange={(e) => setInput(e.target.value)} type="text" className='bg-transparent focus:outline-none w-full p-1 caret-white placeholder-gray-300 mb-1 text-white' placeholder='Ask Anything, select a text and right click to view commands'/>
         <div className='p-1 pr-3 text-white flex items-center justify-between'>
           <p className='text-sm'>Google Gemini</p>
-          <button type="submit">{!Loading ? <IoSend /> : <LoaderCircle className="animate-spin"/>}</button>
+          <div className='flex justify-between gap-6'>
+            <button type="submit">{!Loading ? <FaMicrophone /> : <LoaderCircle className="animate-spin"/>}</button>
+            <button type="submit">{!Loading ? <IoSend /> : <LoaderCircle className="animate-spin"/>}</button>
+          </div>
         </div>
       </form>
     </div>

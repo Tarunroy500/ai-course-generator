@@ -121,6 +121,7 @@ function ChapterContent() {
   useEffect(() => {
     async function getData(_id) {
       try {
+
         const response = await axios.get(
           "/api/data",
           {
@@ -130,6 +131,7 @@ function ChapterContent() {
         setMarkdownContent(response.data.markdown); // Assuming the response has the markdown content
       } catch (error) {
         console.error("Error fetching data:", error);
+
       }
     }
 

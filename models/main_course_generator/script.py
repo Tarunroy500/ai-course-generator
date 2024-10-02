@@ -8,6 +8,9 @@ import base64
 from pymongo import MongoClient
 from google_model import GoogleModel
 from groq_model import GroqModel
+
+from flask import Flask, render_template, request, jsonify
+import requests
 # from openai_model import OpenAIModel
 
 # Configure logging to write to a file
@@ -37,7 +40,7 @@ db = client['course_database']
 project_collection = db['projects']
 
 class CourseGenerator:
-    def __init__(self, user_id, content, descriptions, type, language, duration, identifier, difficulty, text_provider, image_provider):
+    def __init__(self, user_id, content, descriptions, type, language, duration, identifier, difficulty, text_provider, image_provider, target_language):
         self.user_id = user_id
         self.type = type
         self.content = content
@@ -48,6 +51,7 @@ class CourseGenerator:
         self.difficulty = difficulty
         self.text_provider = text_provider
         self.image_provider = image_provider
+        self.target_language = target_language
 
         # Initialize project document
         self.project_id = project_collection.insert_one({
@@ -118,11 +122,6 @@ class CourseGenerator:
             # Assemble markdown
             final_output = self.assemble_markdown(result_list, image_data)
 
-            # # Convert to JSON
-            # jsonified = self.convert_to_json(final_output)
-            # if jsonified is None:
-            #     return
-
             # Save markdown
             self.save_markdown(final_output)
             print(final_output)
@@ -167,15 +166,95 @@ class CourseGenerator:
 
 
     def handle_translation(self):
-        pass
+        url = "https://api.sarvam.ai/translate"
+
+        payload = {
+            "input": self.content, 
+            "source_language_code": "en-IN",
+            "target_language_code": self.target_language, 
+            "speaker_gender": "Male",
+            "mode": "formal",
+            "model": "mayura:v1",
+            "enable_preprocessing": True
+        }
+
+        headers = {
+            "Content-Type": "application/json",
+            "api-subscription-key": "21f113e6-3ee3-4cc9-8e7a-2c851019a2c8" 
+        }
+
+        response = requests.post(url, json=payload, headers=headers)
+
+        if response.status_code == 200:
+            try:
+                translated_text = response.json()["translated_text"]
+                return translated_text
+            except KeyError: 
+                return f"Error: Unexpected API response format. {response.text}"
+        else:
+            return f"Error: {response.status_code} {response.text}" 
 
 
     def handle_speech_to_text(self):
-        pass
+        # Sarvam API details
+        url = "https://api.sarvam.ai/speech-to-text-translate"
+        api_key = "b6e62ec5-4a76-4b0f-8922-fe2a9b23af4f"  # Replace with your Sarvam API key
+        
+        with open(self.content, 'rb') as audio_file:
+            files = {
+                'file': (self.content, audio_file, 'audio/wav'),
+            }
+            data = {
+                'model': 'saaras:v1',  # Model to use
+            }
+            headers = {
+                'api-subscription-key': api_key,  # Correct API subscription key header
+            }
+
+            # Send request to Sarvam API
+            response = requests.post(url, files=files, data=data, headers=headers)
+
+            if response.status_code == 200:
+                response_data = response.json()
+                transcript = response_data.get('transcript', 'No transcript found')
+                return transcript
+            else:
+                return None
 
 
     def handle_text_to_speech(self):
-        pass
+        # First, translate the text
+        if self.target_language != "English":
+            self.content = self.handle_translation()
+
+        if self.content is None:
+            return None
+
+        # Then, convert the translated text to speech
+        payload = {
+            "inputs": [self.content],  # Use the translated text here
+            "target_language_code": self.target_language,
+            "speaker": "meera",
+            "pitch": 0,
+            "pace": 1.65,
+            "loudness": 1.5,
+            "speech_sample_rate": 22050,
+            "enable_preprocessing": True,
+            "model": "bulbul:v1"
+        }
+
+        headers = {
+            "Content-Type": "application/json",
+            "api-subscription-key": "b6e62ec5-4a76-4b0f-8922-fe2a9b23af4f"
+        }
+
+        response = requests.post("https://api.sarvam.ai/text-to-speech", json=payload, headers=headers)
+
+        if response.status_code == 200:
+            audio_data = response.json().get('audios', [])[0]
+            return audio_data
+        else:
+            return None
 
 
     def get_text_model(self):
@@ -407,6 +486,7 @@ if __name__ == "__main__":
     difficulty = args[8] if len(args) > 8 else 'Beginner'
     text_provider = args[9] if len(args) > 9 else 'groq'
     image_provider = args[10] if len(args) > 10 else 'google'
+    target_language = args[11] if len(args) > 11 else 'English'
 
     course_generator = CourseGenerator(
         user_id,
@@ -418,7 +498,8 @@ if __name__ == "__main__":
         identifier,
         difficulty,
         text_provider,
-        image_provider
+        image_provider,
+        target_language
     )
 
     course_generator.start()

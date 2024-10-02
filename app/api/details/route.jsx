@@ -18,7 +18,7 @@ export async function POST(request) {
 
 
     return NextResponse.json(
-      { message: 'Data received successfully', receivedData: data },
+      { message: 'Data received successfully', receivedData: data, projectId : projectId, courseData : courseData },
       { status: 200 }
     );
   } catch (error) {

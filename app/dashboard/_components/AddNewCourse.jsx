@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { LoaderCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 import {
   Dialog,
   DialogContent,
@@ -23,7 +24,7 @@ import {
 } from "@/components/ui/select";
 
 function AddNewCourse() {
-
+  const [ProjectId, setProjectId] = useState('');
   const [openDialog, setOpenDialog] = useState(false);
   const [loading, setLoading] = useState(false);
   const [Details, setDetails] = useState({
@@ -35,6 +36,7 @@ function AddNewCourse() {
     'type': 0
   });
 
+  const router = useRouter();
 
   const handleDetailsChange = (key, value) => {
     setDetails((prevDetails) => ({
@@ -62,15 +64,22 @@ function AddNewCourse() {
 
 
       if(response.status === 200 || response.status === 201) {
-        toast.success('Course created successfully!');
+        toast.success('Course created successfully!\nRedirecting to the course page');
         setLoading(false);
         console.log(response.data);
+        let project_id = response.data.projectId
+        project_id = project_id.trim();
+        NavigateToCourse(project_id);
         // Redirect to course page or perform other actions as needed
       }
     } catch (error) {
       toast.error(error.message);
     }
   };
+
+  const NavigateToCourse = (_id) => {
+    router.push(`/course/${_id}`)
+  }
 
 
   return (

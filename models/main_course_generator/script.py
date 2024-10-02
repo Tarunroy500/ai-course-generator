@@ -202,7 +202,10 @@ class CourseGenerator:
                 {"_id": self.project_id},
                 {"$set": {"course_content": final_output}}
             )
+
+            
             logging.info(f"Course content saved to MongoDB with ID: {self.project_id}")
+            print(self.project_id) # For sending the course id  to the user
         except Exception as e:
             logging.error(f"Error saving course content to MongoDB: {e}")
 

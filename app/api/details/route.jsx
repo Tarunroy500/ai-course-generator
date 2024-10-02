@@ -10,7 +10,11 @@ export async function POST(request) {
     console.log('Received data:', data);
 
     let response = await getResponseFromAPI(data)
-    console.log(`>>> Json Formatted Response from API : \n\n ${response}`)
+    let [projectId, courseData] = response.split('\n')
+
+    console.log(`>>> Project ID: ${projectId}`)
+    console.log(`>>> Json Formatted Response from API : \n\n ${courseData}`)
+      
 
 
     return NextResponse.json(

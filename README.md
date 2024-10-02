@@ -1,100 +1,197 @@
 # AI Course Generator
 
-This is an AI Course Generator project built with [Next.js](https://nextjs.org/) and powered by various modern web technologies. The application allows users to create personalized learning paths tailored by AI to meet their unique goals.
+![image](public/icon.png)
 
-## Table of Contents
+## Overview
 
-- [Getting Started](#getting-started)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Getting Started
-
-To get started with the project, follow the instructions below.
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The AI Course Generator is a web application designed to create personalized learning paths using AI. It leverages various AI models to generate course content, including text and images, and provides functionalities for speech-to-text and text-to-speech conversions. The application is built using a combination of Python, Flask, and Next.js, and integrates with MongoDB for data storage.
 
 
-### Features
 
-- Create personalized courses using AI.
-- User-friendly interface with a responsive design.
-- Integration with Clerk for authentication.
-- Dynamic course content generation.
+## Features
 
-### Technologies Used
+- **Course Generation**: Generate personalized courses based on user input.
+- **Speech-to-Text**: Convert audio files to text using the Sarvam API.
+- **Text-to-Speech**: Convert text to speech in various languages using the Sarvam API.
+- **Chat System**: Interactive chat system for course content generation.
+- **Image Generation**: Generate images based on text prompts.
+- **Translation**: Translate text into different languages.
 
-- **Next.js**: A React framework for server-side rendering and static site generation.
-- **React**: A JavaScript library for building user interfaces.
-- **Tailwind CSS**: A utility-first CSS framework for styling.
-- **Clerk**: Authentication and user management.
-- **Axios**: Promise-based HTTP client for making requests.
-- **Lucide React**: A collection of icons for React applications.
-- **React Toastify**: For displaying notifications.
+## Project Structure
+
+### Backend
+
+- **Flask**: Used for handling API requests and rendering templates.
+- **MongoDB**: Used for storing course data, logs, and chat messages.
+- **Sarvam API**: Used for speech-to-text and text-to-speech functionalities.
+- **Google Vertex AI**: Used for generating text and images.
+- **Groq**: Used for generating text.
+
+### Frontend
+
+- **Next.js**: Used for building the user interface.
+- **Tailwind CSS**: Used for styling the application.
+- **React**: Used for building interactive components.
 
 ## Installation
 
+### Prerequisites
+
+- Python 3.8+
+- Node.js 14+
+- MongoDB
+
+### Backend Setup
+
 1. Clone the repository:
+    ```bash
+    git clone https://github.com/Tarunroy500/ai-course-generator.git
+    cd ai-course-generator
+    ```
 
-   ```bash
-   git clone https://github.com/Tarunroy500/ai-course-generator.git
-   ```
+2. Create a virtual environment and activate it:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-2. Navigate to the project directory:
+3. Install the required Python packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-   ```bash
-   cd ai-course-generator
-   ```
+4. Set up environment variables for API keys and MongoDB connection string.
 
-3. Install the dependencies:
+### Frontend Setup
 
-   ```bash
-   npm install
-   ```
+1. Navigate to the frontend directory:
+    ```bash
+    cd frontend
+    ```
 
-   or
+2. Install the required Node.js packages:
+    ```bash
+    npm install
+    ```
 
-   ```bash
-   yarn install
-   ```
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+
+### Running the Frontend
+
+1. Start the Next.js development server:
+    ```bash
+    npm run dev
+    ```
+
+## API Endpoints
+
+### Speech-to-Text
+
+- **Description**: Converts audio files to text using the Sarvam API.
+
+
+### Text-to-Speech
+
+- **Description**: Converts text to speech using the Sarvam API.
+
+
+### Course Generation
+
+- **Description**: Generates course content based on user input.
+
+## Frontend Components
+
+### Hero Component
+
+- **Description**: Displays the main hero section of the landing page.
+
+
+### Dashboard
+
+- **Description**: Main dashboard for creating and managing courses.
+
+
+### ChatBot
+
+- **Description**: Interactive chat system for course content generation.
+
+
+## Configuration
+
+### Tailwind CSS
+
+- **Configuration File**: `tailwind.config.js`
+- **CSS File**: `app/globals.css`
+
+
+### Environment Variables
+
+- **MongoDB Connection String**: Set the connection string for MongoDB in your environment variables.
+- **Sarvam API Key**: Set the API key for Sarvam in your environment variables.
+- **Google Cloud Project ID**: Set the Google Cloud Project ID in your environment variables.
+- **Groq API Key**: Set the Groq API key in your environment variables.
+
+## Dependencies
+
+### Python Packages
+
+- `requests`
+- `playsound`
+- `Flask==2.0.2`
+- `groq`
+- `markdown`
+- `html_to_json`
+- `vertexai`
+
+### Node.js Packages
+
+- `@clerk/nextjs`
+- `@radix-ui/react-dialog`
+- `@radix-ui/react-icons`
+- `@radix-ui/react-select`
+- `@radix-ui/react-slot`
+- `axios`
+- `class-variance-authority`
+- `clsx`
+- `lucide-react`
+- `mongodb`
+- `next`
+- `react`
+- `react-dom`
+- `react-icons`
+- `react-toastify`
+- `tailwind-merge`
+- `tailwindcss-animate`
+
+## Backend Code Details
+
+### `script.py`
+
+This script handles the main course generation logic, including connecting to MongoDB, generating prompts, and saving course content.
+
+
+### `google_model.py`
+
+This script initializes and uses Google Vertex AI models for generating text and images.
+
+### `groq_model.py`
+
+This script initializes and uses Groq models for generating text.
 
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Acknowledgements
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- Special thanks to the developers of the Sarvam API for providing the speech-to-text and text-to-speech functionalities.
+- Thanks to the contributors of the various open-source libraries used in this project.
+
+## Contact
+
+For any inquiries or support, please contact [tarunroy500@gmail.com, adityaraj.anshukumar50@gmail.com, vsurajk7@gmail.com, utkarshanandani9@gmail.com].

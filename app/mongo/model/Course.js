@@ -63,6 +63,7 @@ const courseSchema = new Schema({
 }, { timestamps: true }); // Add timestamps to track created and updated times
 
 // Create the Course model
-const Course = mongoose.model('Course', courseSchema);
+
+const Course = mongoose.models.Course || mongoose.model('Course', courseSchema) ;
 
 module.exports = Course;

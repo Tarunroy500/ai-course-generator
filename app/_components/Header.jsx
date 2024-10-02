@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
-import Logo from "../../public/logo.webp";
+import Logo from "../../public/icon.png";
 import Link from "next/link";
 
 const Header = () => {

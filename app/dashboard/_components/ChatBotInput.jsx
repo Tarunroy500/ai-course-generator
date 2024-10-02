@@ -31,8 +31,8 @@ const ChatBotInput = () => {
 
       if(response.status === 200 || response.status === 201) {
         setLoading(false);
-        console.log(response.data);
-        setcurrentChat(prev => [...prev, {role: 'Assistant', content: "Tell me more about error"}]) // Add content received from API
+        console.log("the response is : ", response);
+        setcurrentChat(prev => [...prev, {role: 'Assistant', content: response.data.chatResponse}]) // Add content received from API
         // Redirect to course page or perform other actions as needed
       }
     } catch (error) {

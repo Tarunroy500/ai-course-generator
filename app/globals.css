@@ -18,6 +18,21 @@ body {
   }
 }
 
+/* Ensure list styles are displayed correctly */
+.chatBot ul {
+  list-style-type: disc; /* Display bullet points */
+  margin-left: 20px;
+}
+
+.chatBot li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+/* p {
+  margin: 10px 0;
+} */
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

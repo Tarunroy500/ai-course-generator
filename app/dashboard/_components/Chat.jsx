@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useContext } from "react";
 import { DashboardContext } from "../layout";
+import FormattedTextComponent from "./FormattedTextComponent";
 
 const Chat = () => {
   const { currentChat, setcuurentChat } = useContext(DashboardContext);
@@ -23,7 +24,7 @@ const Chat = () => {
             >
               {chat.role}
             </div>
-            <div className="text-slate-500">{chat.content}</div>
+            <div className="text-slate-500 chatBot"><FormattedTextComponent content={chat.content} /></div>
           </div>
         );
       })}

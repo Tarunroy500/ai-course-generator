@@ -77,6 +77,13 @@ class CourseGenerator:
     def generate_course(self):
         logging.info("Starting course generation process...")
 
+        if self.type == 1:
+            # Store User message in MongoDB
+            chat_id = project_collection.update_one(
+                {"_id": self.project_id},
+                {"$push": {"chat": {"from_system": False, "message": self.content}}}
+            )     
+
         # Generate prompt
         self.prompt = self.generate_prompt()
         logging.info("Prompt created successfully.")
@@ -102,7 +109,7 @@ class CourseGenerator:
             # Chat messages will be saved to MongoDB.
             if self.type == 1:
                 print(self.result)
-                    # Store image in MongoDB
+                    # Store system message in MongoDB
                 chat_id = project_collection.update_one(
                     {"_id": self.project_id},
                     {"$push": {"chat": {"from_system": True, "message": self.result}}}

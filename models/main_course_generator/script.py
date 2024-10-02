@@ -14,7 +14,7 @@ from groq_model import GroqModel
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    filename='main_course/course_generator.log',
+    filename='course_generator.log',
     filemode='a'  # Append mode
 )
 
@@ -92,6 +92,21 @@ class CourseGenerator:
             # Generate course content
             self.result = self.generate_course_texts()
             if self.result is None:
+                return
+            
+            # When self.type == 1, we will return the result as it is.
+            # We will not save the content to markdown  and json, just feed it to the webpage.
+            # This is because, we need to show the content to the user as it is, no modifications.
+            # This is the chat system.
+            # We will not generate images in chat system.
+            # Chat messages will be saved to MongoDB.
+            if self.type == 1:
+                print(self.result)
+                    # Store image in MongoDB
+                chat_id = project_collection.update_one(
+                    {"_id": self.project_id},
+                    {"$push": {"chat": {"from_system": True, "message": self.result}}}
+                )                
                 return
 
             # Generate images

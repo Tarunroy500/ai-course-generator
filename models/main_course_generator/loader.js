@@ -11,7 +11,7 @@ function getResponseFromAPI(data) {
         let type = data.details?.type || 0;
         let language = data.details?.language || "English";
         let duration = data.details?.duration || 1;
-        let identifier = data.details?.identifier || "Weeks";
+        let identifier = data.details?.identifier || "Days";
         let difficulty = data.details?.difficulty || "Beginner";
 
         // Construct the arguments array for the Python script

@@ -6,6 +6,8 @@ import { AiOutlineRobot } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { SignOutButton } from "@clerk/nextjs";
+import Image from "next/image";
+import Logo from "../../../public/icon.png";
 
 function SideBar() {
   const { chatShow, setchatShow } = useContext(DashboardContext);
@@ -14,7 +16,7 @@ function SideBar() {
 
   return (
     <div className="fixed h-full md:w-64 p-5 shadow-md">
-      <h1>LOGO</h1>
+      <Image src={Logo} alt="Logo" width={90} height={90} /> {/* Adjust size as needed */}
       <hr className="my-5" />
       <ul className="flex flex-col gap-2">
         <Link href={'/dashboard'}>

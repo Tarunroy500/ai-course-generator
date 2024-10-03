@@ -1,45 +1,52 @@
-"use client"
-import React, { useState, useContext } from 'react'
-import { IoSend } from "react-icons/io5";
-import { DashboardContext } from '../layout';
+"use client";
+import React, { useState, useContext } from "react";
+import { IoMic, IoSend } from "react-icons/io5";
+import { DashboardContext } from "../layout";
 import { LoaderCircle } from "lucide-react";
 import { FaMicrophone } from "react-icons/fa6";
 import axios from 'axios';
 
 const ChatBotInput = () => {
-  const [Input, setInput] = useState('');
+  const [Input, setInput] = useState("");
   const [Loading, setLoading] = useState(false);
-  const {currentChat, setcurrentChat} = useContext(DashboardContext);
+  const { currentChat, setcurrentChat } = useContext(DashboardContext);
 
   const handleSubmit = async (e) => {
-    setInput('');
+    setInput("");
     setLoading(true);
     e.preventDefault();
-    setcurrentChat(prev => [...prev, {role: 'User', content: Input}]);
+    setcurrentChat((prev) => [...prev, { role: "User", content: Input }]);
 
     try {
-      const response = await axios.post('/api/details', {
-        details : {
-          "title" : Input,
-          "type" : 1
-        }
-      },{
-        headers: {
-          'Content-Type': 'application/json'
+      const response = await axios.post(
+        "/api/details",
+        {
+          details: {
+            title: Input,
+            type: 1,
+          },
         },
-        withCredentials: true,
-      })
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
-      if(response.status === 200 || response.status === 201) {
+      if (response.status === 200 || response.status === 201) {
         setLoading(false);
         console.log("the response is : ", response);
-        setcurrentChat(prev => [...prev, {role: 'Assistant', content: response.data.chatResponse}]) // Add content received from API
+        setcurrentChat((prev) => [
+          ...prev,
+          { role: "Assistant", content: response.data.chatResponse },
+        ]); // Add content received from API
         // Redirect to course page or perform other actions as needed
       }
     } catch (error) {
       alert(error.message);
     }
-  }
+  };
 
   return (
     <div>
@@ -56,7 +63,7 @@ const ChatBotInput = () => {
       </form>
     </div>
     </div>
-  )
-}
+  );
+};
 
-export default ChatBotInput
+export default ChatBotInput;

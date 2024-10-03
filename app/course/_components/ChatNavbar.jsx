@@ -5,10 +5,10 @@ import { IoAddOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { VscScreenFull } from "react-icons/vsc";
 import { LuHistory } from "react-icons/lu";
-import { DashboardContext } from '../layout';
+import { CourseContext } from '../[courseid]/layout';
 
 const ChatNavbar = () => {
-  const {chatShow, setchatShow} = useContext(DashboardContext);
+  const {chatShow, setchatShow} = useContext(CourseContext);
   return (
     <div>
       <nav className='flex items-center justify-between p-2'>

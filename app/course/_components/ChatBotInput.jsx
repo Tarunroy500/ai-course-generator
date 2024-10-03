@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useContext } from "react";
 import { IoMic, IoSend } from "react-icons/io5";
-import { DashboardContext } from "../layout";
+import { CourseContext } from "../[courseid]/layout";
 import { LoaderCircle } from "lucide-react";
 import { FaMicrophone } from "react-icons/fa6";
 import axios from 'axios';
@@ -9,7 +9,7 @@ import axios from 'axios';
 const ChatBotInput = () => {
   const [Input, setInput] = useState("");
   const [Loading, setLoading] = useState(false);
-  const { currentChat, setcurrentChat } = useContext(DashboardContext);
+  const { currentChat, setcurrentChat } = useContext(CourseContext);
 
   const handleSubmit = async (e) => {
     setInput("");
@@ -56,7 +56,7 @@ const ChatBotInput = () => {
         <div className='p-1 pr-3 text-white flex items-center justify-between'>
           <p className='text-sm'>Google Gemini</p>
           <div className='flex justify-between gap-6'>
-            <button type="submit">{!Loading ? <FaMicrophone /> : <LoaderCircle className="animate-spin"/>}</button>
+            <button type="submit"><FaMicrophone /></button>
             <button type="submit">{!Loading ? <IoSend /> : <LoaderCircle className="animate-spin"/>}</button>
           </div>
         </div>

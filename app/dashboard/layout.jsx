@@ -1,16 +1,10 @@
-"use client"
 import React from "react";
-import { useState, createContext } from "react";
 import SideBar from "./_components/SideBar";
 import Header from "./_components/Header";
 
-export const DashboardContext = createContext();
 
 function DashBoardLayout({ children }) {
-  const [chatShow, setchatShow] = useState(false);
-  const [currentChat, setcurrentChat] = useState([]);
   return (
-    <DashboardContext.Provider value={{ chatShow, setchatShow, currentChat, setcurrentChat }}> 
     <div>
       <div className="md:w-64 hidden md:block">
         <SideBar />
@@ -20,7 +14,6 @@ function DashBoardLayout({ children }) {
         {children}
         </div>
     </div>
-    </DashboardContext.Provider>
   );
 }
 

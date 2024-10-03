@@ -140,7 +140,7 @@ function ChapterContent() {
       }
     }
 
-    // getData(courseid);
+    getData(courseid);
   }, [courseid]);
 
   const handleMouseUp = () => {

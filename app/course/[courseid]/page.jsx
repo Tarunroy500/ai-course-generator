@@ -1,14 +1,8 @@
 "use client";
 import React, { useEffect, useState, useContext } from "react";
-import ChapterListCard from "../_components/ChapterListCard";
 import ChapterContent from "../_components/ChapterContent";
-import Header from "../_components/Header";
-import { useRouter, usePathname } from "next/navigation";
-import { IoHomeOutline, IoLogOutOutline } from "react-icons/io5";
-import { AiOutlineRobot } from "react-icons/ai";
-import { SignOutButton } from "@clerk/nextjs";
-import Link from "next/link";
-import { DashboardContext } from "@/app/dashboard/layout";
+import { CourseContext } from "./layout";
+import ChatBot from "../_components/ChatBot";
 
 // Popup Component
 const Popup = ({ x, y, onClose }) => {
@@ -80,10 +74,9 @@ const Popup = ({ x, y, onClose }) => {
   );
 };
 
-function StartCourse({ params }) {
-  const router = useRouter();
-  const path = usePathname();
+function StartCourse() {
   const [popup, setPopup] = useState({ isVisible: false, x: 0, y: 0 });
+  const {chatShow, setChatShow} = useContext(CourseContext);
 
   const handleMouseUp = () => {
     const selectedText = window.getSelection().toString();
@@ -106,48 +99,20 @@ function StartCourse({ params }) {
 
   return (
     <div>
-      <Header onBack={() => router.push("/dashboard")} />
-      <div className="flex mt-20">
-        <div className="fixed md:w-72 hidden md:block h-screen border-t border-r bg-white shadow-md">
-          <div className="fixed h-full md:w-64 p-5 shadow-md">
-            <hr className="my-5" />
-            <ul className="flex flex-col gap-2">
-              <Link href={"/dashboard"}>
-                <li
-                  className={`flex items-center space-x-2 cursor-pointer p-3 hover:bg-slate-500 hover:text-white rounded-md ${
-                    "/dashboard" === path && "bg-slate-500 text-white"
-                  }`}
-                >
-                  <IoHomeOutline />
-                  <span>Home</span>
-                </li>
-              </Link>
-
-              <li className={`flex items-center space-x-2 cursor-pointer p-3 hover:bg-slate-500 hover:text-white rounded-md `}>
-                <button className="flex items-center space-x-2 w-full text-left">
-                  <AiOutlineRobot />
-                  <span>ChatBot</span>
-                </button>
-              </li>
-
-              <li className="flex items-center space-x-2 cursor-pointer p-3 hover:bg-slate-500 hover:text-white rounded-md">
-                <SignOutButton>
-                  <button className="flex items-center space-x-2 w-full text-left">
-                    <IoLogOutOutline />
-                    <span>Logout</span>
-                  </button>
-                </SignOutButton>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Chapter Content and Popup */}
-        <div className="md:ml-72 max-h-[88vh] overflow-y-auto py-5" onMouseUp={handleMouseUp}>
-          <ChapterContent />
-          {popup.isVisible && (
-            <Popup x={popup.x} y={popup.y} onClose={handleClosePopup} />
-          )}
+      {/* Chapter Content and Popup */}
+      <div className="h-[88vh] flex gap-3" onMouseUp={handleMouseUp}>
+        <div className="py-5 overflow-y-auto"><ChapterContent /></div>
+        {popup.isVisible && (
+          <Popup x={popup.x} y={popup.y} onClose={handleClosePopup} />
+        )}
+        <div
+          className={
+            chatShow
+              ? "h-[87vh] w-[30vw] transition-all ease-in-out"
+              : "hidden transition-all ease-in-out"
+          }
+        >
+          <ChatBot />
         </div>
       </div>
     </div>

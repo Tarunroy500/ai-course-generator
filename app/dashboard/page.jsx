@@ -1,11 +1,7 @@
-"use client"
-import React, {useContext} from 'react'
-import { DashboardContext } from './layout'
+import React from 'react'
 import AddNewCourse from './_components/AddNewCourse'
-import ChatBot from './_components/ChatBot'
 
 const DashBoard = () => {
-  const {chatShow, setchatShow} = useContext(DashboardContext);
   return (
     <div className='flex w-full'>
       <div className='p-10 w-full'>
@@ -14,9 +10,6 @@ const DashBoard = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 my-5'>
           <AddNewCourse />
         </div>
-      </div>
-      <div className={chatShow ? 'h-[90vh] w-[30vw] transition-all ease-in-out' : 'hidden transition-all ease-in-out'}>
-        <ChatBot />
       </div>
     </div>
   )

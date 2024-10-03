@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useContext } from "react";
-import { DashboardContext } from "../layout";
+import { CourseContext } from "../[courseid]/layout";
 import FormattedTextComponent from "./FormattedTextComponent";
 
 const Chat = () => {
-  const { currentChat, setcuurentChat } = useContext(DashboardContext);
+  const { currentChat, setcuurentChat } = useContext(CourseContext);
 
   return (
     <div className="p-3 pb-0">

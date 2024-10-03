@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import mongoose from "mongoose";
-import Course from "@/app/mongo/model/Course";
 import { MongoClient, ObjectId } from "mongodb";
 
 export async function POST(request) {

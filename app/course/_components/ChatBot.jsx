@@ -17,7 +17,7 @@ const ChatBot = () => {
   });
 
   return (
-    <div className='h-full w-full shadow-md max-w-[30vw]'>
+    <div className='h-full w-full shadow-md min-w-[18vw]'>
       <ChatNavbar />
       <div ref={chatRef} className='h-[94%] overflow-y-auto'>
       <Chat />

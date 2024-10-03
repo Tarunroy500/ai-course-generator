@@ -114,6 +114,7 @@ const Popup = ({ x, y, onClose }) => {
 function ChapterContent() {
   const [popup, setPopup] = useState({ isVisible: false, x: 0, y: 0 });
   const [MarkdownContent, setMarkdownContent] = useState("");
+  const [loading, setloading] = useState(false);
 
   const params = useParams();
   const { courseid } = params;
@@ -121,14 +122,18 @@ function ChapterContent() {
   useEffect(() => {
     async function getData(_id) {
       try {
+        const response = await axios.post("/api/course", {
+          _id: _id
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          withCredentials: true,
+        })
 
-        const response = await axios.get(
-          "/api/data",
-          {
-            params: { _id: courseid },
-          }
-        );
-        setMarkdownContent(response.data.markdown); // Assuming the response has the markdown content
+        if(response.status === 200 || response.status === 201) {
+          setMarkdownContent(response.data.course);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
 
@@ -157,21 +162,14 @@ function ChapterContent() {
     setPopup({ isVisible: false, x: 0, y: 0 });
   };
 
+  console.log(MarkdownContent)
+
   return (
-    <div
-      className="p-10 bg-white rounded-lg max-w-4xl mx-auto my-8"
-      onMouseUp={handleMouseUp}
-    >
-      <h2 className="font-bold text-3xl text-blue-600 mb-4">Chapter Name</h2>
-      <p className="text-gray-700 leading-relaxed text-lg">
-        This is a detailed description of the chapter. The content can go into
-        more depth, explaining the key points, and giving the reader an overview
-        of what they will learn in this chapter. Make it engaging and concise.
-      </p>
-      <MarkdownRenderer MarkdownContent={MarkdownContent} />
-      {popup.isVisible && (
-        <Popup x={popup.x} y={popup.y} onClose={handleClosePopup} />
-      )}
+    <div className="px-10 bg-white rounded-lg max-w-screen mx-auto overflow-y-auto">
+      {
+        loading ? <div className="text-9xl font-bold">Loading............</div> :
+        <MarkdownRenderer MarkdownContent={MarkdownContent} />
+      }
     </div>
   );
 }

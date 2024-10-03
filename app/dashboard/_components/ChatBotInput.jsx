@@ -1,59 +1,85 @@
-"use client"
-import React, { useState, useContext } from 'react'
-import { IoSend } from "react-icons/io5";
-import { DashboardContext } from '../layout';
+"use client";
+import React, { useState, useContext } from "react";
+import { IoMic, IoSend } from "react-icons/io5";
+import { DashboardContext } from "../layout";
 import { LoaderCircle } from "lucide-react";
-import axios from 'axios';
+import axios from "axios";
 
 const ChatBotInput = () => {
-  const [Input, setInput] = useState('');
+  const [Input, setInput] = useState("");
   const [Loading, setLoading] = useState(false);
-  const {currentChat, setcurrentChat} = useContext(DashboardContext);
+  const { currentChat, setcurrentChat } = useContext(DashboardContext);
 
   const handleSubmit = async (e) => {
-    setInput('');
+    setInput("");
     setLoading(true);
     e.preventDefault();
-    setcurrentChat(prev => [...prev, {role: 'User', content: Input}]);
+    setcurrentChat((prev) => [...prev, { role: "User", content: Input }]);
 
     try {
-      const response = await axios.post('/api/details', {
-        details : {
-          "title" : Input,
-          "type" : 1
-        }
-      },{
-        headers: {
-          'Content-Type': 'application/json'
+      const response = await axios.post(
+        "/api/details",
+        {
+          details: {
+            title: Input,
+            type: 1,
+          },
         },
-        withCredentials: true,
-      })
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
-      if(response.status === 200 || response.status === 201) {
+      if (response.status === 200 || response.status === 201) {
         setLoading(false);
         console.log("the response is : ", response);
-        setcurrentChat(prev => [...prev, {role: 'Assistant', content: response.data.chatResponse}]) // Add content received from API
+        setcurrentChat((prev) => [
+          ...prev,
+          { role: "Assistant", content: response.data.chatResponse },
+        ]); // Add content received from API
         // Redirect to course page or perform other actions as needed
       }
     } catch (error) {
       alert(error.message);
     }
-  }
+  };
 
   return (
     <div>
-    <div className='p-3'>
-      <form onSubmit={handleSubmit} className='w-full bg-slate-500 rounded-lg p-2'>
-        <input value={Input} onChange={(e) => setInput(e.target.value)} type="text" className='bg-transparent focus:outline-none w-full p-1 caret-white placeholder-gray-300 mb-1 text-white' placeholder='Ask Anything, select a text and right click to view commands'/>
-        <div className='p-1 pr-3 text-white flex items-center justify-between'>
-          <p className='text-sm'>Google Gemini</p>
-          
-          <button type="submit">{!Loading ? <IoSend /> : <LoaderCircle className="animate-spin"/>}</button>
-        </div>
-      </form>
+      <div className="p-3">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full bg-slate-500 rounded-lg p-2"
+        >
+          <input
+            value={Input}
+            onChange={(e) => setInput(e.target.value)}
+            type="text"
+            className="bg-transparent focus:outline-none w-full p-1 caret-white placeholder-gray-300 mb-1 text-white"
+            placeholder="Ask Anything, select a text and right click to view commands"
+          />
+          <div className="p-1 pr-3 text-white flex items-center justify-between">
+            <p className="text-sm">Google Gemini</p>
+            <div>
+              <button type="button" className="mr-2">
+                <IoMic />
+              </button>
+              <button type="submit">
+                {!Loading ? (
+                  <IoSend />
+                ) : (
+                  <LoaderCircle className="animate-spin" />
+                )}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default ChatBotInput
+export default ChatBotInput;

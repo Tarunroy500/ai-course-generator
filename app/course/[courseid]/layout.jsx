@@ -9,8 +9,9 @@ export const CourseContext = createContext();
 function CourseLayout({ children }) {
   const [chatShow, setchatShow] = useState(false);
   const [currentChat, setcurrentChat] = useState([]);
+  const [Loading, setLoading] = useState(false);
   return (
-    <CourseContext.Provider value={{ chatShow, setchatShow, currentChat, setcurrentChat }}> 
+    <CourseContext.Provider value={{ chatShow, setchatShow, currentChat, setcurrentChat, Loading, setLoading}}> 
     <div>
       <div className="md:w-64 hidden md:block">
         <SideBar />

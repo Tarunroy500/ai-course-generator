@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
 import DOMPurify from 'dompurify';
-import '../[courseid]/course.css'
+import parse from 'html-react-parser'; // Importing html-react-parser
+import '../[courseid]/course.css';
 
 const MarkdownRenderer = ({ MarkdownContent }) => {
   const [htmlContent, setHtmlContent] = useState('');
@@ -14,7 +15,6 @@ const MarkdownRenderer = ({ MarkdownContent }) => {
         const processedContent = await remark().use(html).process(MarkdownContent);
         const sanitizedContent = DOMPurify.sanitize(processedContent.toString());
         setHtmlContent(sanitizedContent);
-        console.log(sanitizedContent);
       } catch (error) {
         console.error('Error processing markdown:', error);
       }
@@ -24,7 +24,9 @@ const MarkdownRenderer = ({ MarkdownContent }) => {
   }, [MarkdownContent]);
 
   return (
-    <div className="markdown-content overflow-y-auto" dangerouslySetInnerHTML={{ __html: htmlContent }} />
+    <div className="markdown-content overflow-y-auto">
+      {parse(htmlContent)} {/* Using html-react-parser to render the HTML safely */}
+    </div>
   );
 };
 

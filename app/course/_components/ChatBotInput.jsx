@@ -8,8 +8,8 @@ import axios from 'axios';
 
 const ChatBotInput = () => {
   const [Input, setInput] = useState("");
-  const [Loading, setLoading] = useState(false);
-  const { currentChat, setcurrentChat } = useContext(CourseContext);
+  
+  const { currentChat, setcurrentChat, Loading, setLoading } = useContext(CourseContext);
 
   const handleSubmit = async (e) => {
     setInput("");

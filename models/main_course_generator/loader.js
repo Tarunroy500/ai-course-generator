@@ -13,6 +13,9 @@ function getResponseFromAPI(data) {
         let duration = data.details?.duration || 1;
         let identifier = data.details?.identifier || "Days";
         let difficulty = data.details?.difficulty || "Beginner";
+        let text_provider = data.details?.text_provider || "groq";
+        let image_provider = data.details?.image_provider || "google";
+        let target_language = data.details?.target_language || "English";
 
         // Construct the arguments array for the Python script
         const pythonArgs = [
@@ -24,7 +27,10 @@ function getResponseFromAPI(data) {
             language,
             duration.toString(),  // Convert numbers to strings to ensure they are passed correctly
             identifier,
-            difficulty
+            difficulty,
+            text_provider,
+            image_provider,
+            target_language
         ];
 
         // Spawn the Python process with arguments

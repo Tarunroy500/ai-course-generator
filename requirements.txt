@@ -6,3 +6,5 @@ groq
 markdown
 html_to_json
 vertexai
+werkzeug==2.2.2
+pymongo

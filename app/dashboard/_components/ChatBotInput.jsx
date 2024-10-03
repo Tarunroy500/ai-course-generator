@@ -3,7 +3,8 @@ import React, { useState, useContext } from "react";
 import { IoMic, IoSend } from "react-icons/io5";
 import { DashboardContext } from "../layout";
 import { LoaderCircle } from "lucide-react";
-import axios from "axios";
+import { FaMicrophone } from "react-icons/fa6";
+import axios from 'axios';
 
 const ChatBotInput = () => {
   const [Input, setInput] = useState("");
@@ -49,35 +50,18 @@ const ChatBotInput = () => {
 
   return (
     <div>
-      <div className="p-3">
-        <form
-          onSubmit={handleSubmit}
-          className="w-full bg-slate-500 rounded-lg p-2"
-        >
-          <input
-            value={Input}
-            onChange={(e) => setInput(e.target.value)}
-            type="text"
-            className="bg-transparent focus:outline-none w-full p-1 caret-white placeholder-gray-300 mb-1 text-white"
-            placeholder="Ask Anything, select a text and right click to view commands"
-          />
-          <div className="p-1 pr-3 text-white flex items-center justify-between">
-            <p className="text-sm">Google Gemini</p>
-            <div>
-              <button type="button" className="mr-2">
-                <IoMic />
-              </button>
-              <button type="submit">
-                {!Loading ? (
-                  <IoSend />
-                ) : (
-                  <LoaderCircle className="animate-spin" />
-                )}
-              </button>
-            </div>
+    <div className='p-3'>
+      <form onSubmit={handleSubmit} className='w-full bg-slate-500 rounded-lg p-2'>
+        <input value={Input} onChange={(e) => setInput(e.target.value)} type="text" className='bg-transparent focus:outline-none w-full p-1 caret-white placeholder-gray-300 mb-1 text-white' placeholder='Ask Anything, select a text and right click to view commands'/>
+        <div className='p-1 pr-3 text-white flex items-center justify-between'>
+          <p className='text-sm'>Google Gemini</p>
+          <div className='flex justify-between gap-6'>
+            <button type="submit">{!Loading ? <FaMicrophone /> : <LoaderCircle className="animate-spin"/>}</button>
+            <button type="submit">{!Loading ? <IoSend /> : <LoaderCircle className="animate-spin"/>}</button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
+    </div>
     </div>
   );
 };

@@ -51,7 +51,7 @@ export async function GET(request){
     const database = client.db("course_database")
     const collection = database.collection("projects")
 
-    const course = await collection.find().toArray()
+    const course = await collection.find({ type: 0 }).toArray();
     // console.log(course);
 
     return NextResponse.json(

@@ -33,7 +33,7 @@ import axios from 'axios'
     <div >
       <h2 className='font-semibold text-xl'>Previous Created Courses</h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3'>
-        {courseList.map((course,index)=>{
+        {courseList.slice().reverse().map((course,index)=>{
           return <CourseItemCard key={index} course={course}/>
         })}
            

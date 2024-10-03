@@ -43,3 +43,26 @@ export async function POST(request) {
     );
   }
 }
+export async function GET(request){
+  try {
+    const client = new MongoClient(process.env.MONGODB_URI);
+    // await mongoose.connect(process.env.MONGODB_URI);
+    await client.connect();
+    const database = client.db("course_database")
+    const collection = database.collection("projects")
+
+    const course = await collection.find().toArray()
+    // console.log(course);
+
+    return NextResponse.json(
+      { message: "Search Successful", course: course },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error Searching:", error);
+    return NextResponse.json(
+      { message: "Error Searching", error: error.message },
+      { status: 500 }
+    );
+  }
+}

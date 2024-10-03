@@ -484,7 +484,7 @@ if __name__ == "__main__":
     duration = int(args[6]) if len(args) > 6 else 1
     identifier = args[7] if len(args) > 7 else 'Day'
     difficulty = args[8] if len(args) > 8 else 'Beginner'
-    text_provider = args[9] if len(args) > 9 else 'groq'
+    text_provider = args[9] if len(args) > 9 else 'google'
     image_provider = args[10] if len(args) > 10 else 'google'
     target_language = args[11] if len(args) > 11 else 'English'
 

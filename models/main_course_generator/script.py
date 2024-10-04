@@ -168,6 +168,9 @@ class CourseGenerator:
     def handle_translation(self):
         url = "https://api.sarvam.ai/translate"
 
+        source_text = self.content
+
+
         payload = {
             "input": self.content, 
             "source_language_code": "en-IN",

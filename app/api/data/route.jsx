@@ -13,7 +13,7 @@ export async function GET(request) {
     console.log("Received data:", _id);
 
     const course = await Course.findById(_id);
-    console.log("Course data:", course);
+    // console.log("Course data:", course);
 
     return NextResponse.json(
       { message: "Search Successful", course: course },

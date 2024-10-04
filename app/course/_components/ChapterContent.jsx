@@ -79,7 +79,7 @@ function ChapterContent() {
   }, [courseid]);
 
   
-  console.log(MarkdownContent)
+  // console.log(MarkdownContent)
 
   return (
     <div className="px-10 bg-white rounded-lg max-w-screen mx-auto overflow-y-auto">

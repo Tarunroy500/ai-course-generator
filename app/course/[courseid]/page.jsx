@@ -3,12 +3,19 @@ import React, { useEffect, useState, useContext } from "react";
 import ChapterContent from "../_components/ChapterContent";
 import { CourseContext } from "./layout";
 import ChatBot from "../_components/ChatBot";
-import axios from 'axios';
+import axios from "axios";
 
 // Popup Component
 const Popup = ({ x, y, onClose, selectedText, setSelectedText }) => {
   const [showLanguages, setShowLanguages] = useState(false); // State to control language dropdown
-  const { chatShow, setchatShow,currentChat, setcurrentChat, Loading, setLoading } = useContext(CourseContext);
+  const {
+    chatShow,
+    setchatShow,
+    currentChat,
+    setcurrentChat,
+    Loading,
+    setLoading,
+  } = useContext(CourseContext);
 
   const languages = [
     { code: "en", label: "English" },
@@ -24,8 +31,15 @@ const Popup = ({ x, y, onClose, selectedText, setSelectedText }) => {
     setShowLanguages(false); // Hide the dropdown after selecting a language
   };
 
-  const handleSendToChat = async() => {
 
+
+  const [base64Audio, setBase64Audio] = useState('');
+
+  
+
+
+
+  const handleSendToChat = async () => {
     setchatShow(true);
 
     // Add your logic to send the selected text to the chat
@@ -59,11 +73,33 @@ const Popup = ({ x, y, onClose, selectedText, setSelectedText }) => {
     } catch (error) {
       alert(error.message);
     }
-    
+
     setSelectedText("");
-     // Clear selected text after sending
-     // Show chat if it's hidden
+    // Clear selected text after sending
+    // Show chat if it's hidden
     onClose(); // Close the popup
+  };
+  const handleTextToSpeech = async () => {
+    try {
+      const response = await axios.post("/api/audio", {
+        text: selectedText,
+        target_language_code: "en-IN", // Set your target language code
+      });
+
+      if (response.status === 200) {
+        // const audioBase64 = response.data.audio;
+        console.log(response.data.audio);
+        // Play the audio
+        var audio = new Audio("data:audio/wav;base64,"+response.data.audio);
+        audio.play();
+        // setBase64Audio("data:audio/wav;base64,"+response.data.audio);
+
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    setSelectedText("");
+    onClose();
   };
 
   return (
@@ -84,10 +120,11 @@ const Popup = ({ x, y, onClose, selectedText, setSelectedText }) => {
         </button>
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200"
-          onClick={() => alert("Text to Speech Selected")}
+          onClick={handleTextToSpeech}
         >
           Text to Speech
         </button>
+        
 
         {/* Translate Button */}
         <div className="relative">
@@ -147,7 +184,9 @@ function StartCourse() {
     <div>
       {/* Chapter Content and Popup */}
       <div className="h-[88vh] flex gap-3" onMouseUp={handleMouseUp}>
-        <div className="py-5 overflow-y-auto"><ChapterContent /></div>
+        <div className="py-5 overflow-y-auto">
+          <ChapterContent />
+        </div>
         {popup.isVisible && (
           <Popup
             x={popup.x}

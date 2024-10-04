@@ -19,7 +19,7 @@ export async function POST(request) {
 
 
       console.log(`>>> Project ID: ${projectId}`)
-      console.log(`>>> Json Formatted Response from API : \n\n ${courseData}`)
+      // console.log(`>>> Json Formatted Response from API : \n\n ${courseData}`)
 
       return NextResponse.json(
         { message: 'Data received successfully', receivedData: data, projectId : projectId, courseData : courseData },
